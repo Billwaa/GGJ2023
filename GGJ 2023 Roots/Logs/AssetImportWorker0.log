@@ -15,7 +15,7 @@ C:/Users/tsang/Documents/Github/GGJ2023/GGJ 2023 Roots
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-60175
+54722
 Successfully changed project path to: C:/Users/tsang/Documents/Github/GGJ2023/GGJ 2023 Roots
 C:/Users/tsang/Documents/Github/GGJ2023/GGJ 2023 Roots
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ C:/Users/tsang/Documents/Github/GGJ2023/GGJ 2023 Roots
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [12476] Host "[IP] 192.168.1.109 [Port] 0 [Flags] 2 [Guid] 3059923917 [EditorId] 3059923917 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-3M1AN8R) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [10328] Host "[IP] 192.168.1.109 [Port] 0 [Flags] 2 [Guid] 879247994 [EditorId] 879247994 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-3M1AN8R) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [12476] Host "[IP] 192.168.1.109 [Port] 0 [Flags] 2 [Guid] 3059923917 [EditorId] 3059923917 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-3M1AN8R) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [10328] Host "[IP] 192.168.1.109 [Port] 0 [Flags] 2 [Guid] 879247994 [EditorId] 879247994 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-3M1AN8R) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 92.13 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 86.28 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.17f1 (3e8111cac19d)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/Resources/UnitySubsystems
@@ -67,89 +67,89 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56080
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56340
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006737 seconds.
+Registered in 0.006096 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 97.49 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 88.57 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.736 seconds
+- Completed reload, in  0.626 seconds
 Domain Reload Profiling:
-	ReloadAssembly (737ms)
-		BeginReloadAssembly (80ms)
+	ReloadAssembly (626ms)
+		BeginReloadAssembly (67ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (528ms)
-			LoadAssemblies (77ms)
+		EndReloadAssembly (450ms)
+			LoadAssemblies (65ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (114ms)
+			SetupTypeCache (105ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (30ms)
-			SetupLoadedEditorAssemblies (329ms)
+			SetupLoadedEditorAssemblies (265ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (8ms)
+				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (98ms)
-				BeforeProcessingInitializeOnLoad (37ms)
-				ProcessInitializeOnLoadAttributes (135ms)
-				ProcessInitializeOnLoadMethodAttributes (50ms)
+				RefreshPlugins (89ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (121ms)
+				ProcessInitializeOnLoadMethodAttributes (46ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005445 seconds.
+Registered in 0.005085 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\tsang\Documents\Github\GGJ2023\GGJ 2023 Roots\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\tsang\Documents\Github\GGJ2023\GGJ 2023 Roots\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.52 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.103 seconds
+- Completed reload, in  1.037 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1104ms)
-		BeginReloadAssembly (112ms)
+	ReloadAssembly (1038ms)
+		BeginReloadAssembly (106ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
+			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (19ms)
-		EndReloadAssembly (872ms)
-			LoadAssemblies (77ms)
+			CreateAndSetChildDomain (17ms)
+		EndReloadAssembly (814ms)
+			LoadAssemblies (75ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (303ms)
+			SetupTypeCache (279ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (57ms)
-			SetupLoadedEditorAssemblies (391ms)
+			RebuildScriptCaches (50ms)
+			SetupLoadedEditorAssemblies (370ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
-				SetLoadedEditorAssemblies (1ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (99ms)
-				ProcessInitializeOnLoadAttributes (250ms)
-				ProcessInitializeOnLoadMethodAttributes (26ms)
-				AfterProcessingInitializeOnLoad (8ms)
+				BeforeProcessingInitializeOnLoad (97ms)
+				ProcessInitializeOnLoadAttributes (235ms)
+				ProcessInitializeOnLoadMethodAttributes (25ms)
+				AfterProcessingInitializeOnLoad (7ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.69 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.58 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3376 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 27 unused Assets / (113.5 KB). Loaded Objects now: 3833.
-Memory consumption went from 115.6 MB to 115.5 MB.
-Total: 3.813000 ms (FindLiveObjects: 0.293800 ms CreateObjectMapping: 0.800600 ms MarkObjects: 2.626900 ms  DeleteObjects: 0.090500 ms)
+Unloading 3492 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 87 unused Assets / (10.3 MB). Loaded Objects now: 3889.
+Memory consumption went from 151.0 MB to 140.7 MB.
+Total: 8.231700 ms (FindLiveObjects: 0.291300 ms CreateObjectMapping: 0.214600 ms MarkObjects: 2.322900 ms  DeleteObjects: 5.402100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -163,31 +163,103 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 780946.909332 seconds.
-  path: Assets/0_Takanashi
-  artifactKey: Guid(bccb7ee2d52c17c44b5ef365e2c97591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/0_Takanashi using Guid(bccb7ee2d52c17c44b5ef365e2c97591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f65ff7d76dde549704c27d9117d121ba') in 0.009817 seconds 
+  Time since last request: 781468.902860 seconds.
+  path: Assets/0_Takanashi/CH/01/FBX
+  artifactKey: Guid(b85daf348ed42da4ca63d03da01b73ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/0_Takanashi/CH/01/FBX using Guid(b85daf348ed42da4ca63d03da01b73ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46a06ae7f8eff584f65a80a3e0d1a197') in 0.010266 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 4.965729 seconds.
-  path: Assets/0_Takanashi/CH
-  artifactKey: Guid(ed6fb53539fec4a4cb571e45dd1d14df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/0_Takanashi/CH using Guid(ed6fb53539fec4a4cb571e45dd1d14df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3310658bb80e61c8c3bfd53827a47af3') in 0.004810 seconds 
+  Time since last request: 4.663104 seconds.
+  path: Assets/0_Takanashi/CH/01/FACE.mat
+  artifactKey: Guid(c24fe6d1a039ec345a030c62e2494892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/0_Takanashi/CH/01/FACE.mat using Guid(c24fe6d1a039ec345a030c62e2494892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff8a75cee26d81797ba25be9d0140856') in 0.105934 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 4.134336 seconds.
-  path: Assets/0_Takanashi/CH/01
-  artifactKey: Guid(cb09d0e81a035ea468b0e890c693ab6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/0_Takanashi/CH/01 using Guid(cb09d0e81a035ea468b0e890c693ab6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2d85cb23be0833f7eed1b68ba9d88d6') in 0.004472 seconds 
+  Time since last request: 18.479354 seconds.
+  path: Assets/0_Takanashi/CH/01/body_Base_Color.png
+  artifactKey: Guid(d32f919ba4116964399f62a78ee06213) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/0_Takanashi/CH/01/body_Base_Color.png using Guid(d32f919ba4116964399f62a78ee06213) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1513e28f3e17e8dc52039130b038db5e') in 0.041991 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 11.582663 seconds.
-  path: Assets/0_Takanashi/CH/01/CH.fbx
+  Time since last request: 0.000023 seconds.
+  path: Assets/0_Takanashi/CH/01/Hair1_Base_Color.png
+  artifactKey: Guid(2addd0e7a3d987645a1c8f723ac50d54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/0_Takanashi/CH/01/Hair1_Base_Color.png using Guid(2addd0e7a3d987645a1c8f723ac50d54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18f98cde1b2fef922982b4d84349ca34') in 0.011842 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 24.708885 seconds.
+  path: Assets/0_Takanashi/CH/01/FACE 1.mat
+  artifactKey: Guid(24893d21660b36b448cc8ac8ddbdcd02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/0_Takanashi/CH/01/FACE 1.mat using Guid(24893d21660b36b448cc8ac8ddbdcd02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c55840bfd3920d0ef23e81e2cd674c72') in 0.562911 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.426674 seconds.
+  path: Assets/0_Takanashi/CH/01/BODY.mat
+  artifactKey: Guid(24893d21660b36b448cc8ac8ddbdcd02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/0_Takanashi/CH/01/BODY.mat using Guid(24893d21660b36b448cc8ac8ddbdcd02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e5fd08cda8e80d7374f63f23b37a0f9') in 0.038699 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.511758 seconds.
+  path: Assets/0_Takanashi/CH/01/BODY 1.mat
+  artifactKey: Guid(13f94dbe4573d0a46b935bceb08a6642) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/0_Takanashi/CH/01/BODY 1.mat using Guid(13f94dbe4573d0a46b935bceb08a6642) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfd3b8183c76caae94e323409d19fad9') in 0.042491 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.021818 seconds.
+  path: Assets/0_Takanashi/CH/01/Hair.mat
+  artifactKey: Guid(13f94dbe4573d0a46b935bceb08a6642) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/0_Takanashi/CH/01/Hair.mat using Guid(13f94dbe4573d0a46b935bceb08a6642) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e28f934ed52e239326a510c25c5cb43a') in 0.031668 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.983215 seconds.
+  path: Assets/0_Takanashi/CH/01/FBX/CH.fbx
   artifactKey: Guid(e78e2d77d8b82dc4c932295e9ac953b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/0_Takanashi/CH/01/CH.fbx using Guid(e78e2d77d8b82dc4c932295e9ac953b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cecee78094b335a8e37777294aee441') in 0.420688 seconds 
+Start importing Assets/0_Takanashi/CH/01/FBX/CH.fbx using Guid(e78e2d77d8b82dc4c932295e9ac953b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e2df40ed68e1a94c4381638ccd66daf') in 0.122586 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 44.693307 seconds.
-  path: Assets/0_Takanashi/CH/01/CH.fbx
+  Time since last request: 9.677136 seconds.
+  path: Assets/0_Takanashi/CH/01/BODY 1.mat
+  artifactKey: Guid(9d220fdd70225f44f936b8f9aacf4593) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/0_Takanashi/CH/01/BODY 1.mat using Guid(9d220fdd70225f44f936b8f9aacf4593) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b96e1a9629b476935db5f338dccdb6e2') in 0.043879 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/0_Takanashi/CH/01/Hair.mat
+  artifactKey: Guid(13f94dbe4573d0a46b935bceb08a6642) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/0_Takanashi/CH/01/Hair.mat using Guid(13f94dbe4573d0a46b935bceb08a6642) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62738229b121bfb2c0cb44326a553668') in 0.017624 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 103.427007 seconds.
+  path: Assets/0_Takanashi/CH/01/PNG
+  artifactKey: Guid(750cc7c2e6147c049831ab4ad837ede2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/0_Takanashi/CH/01/PNG using Guid(750cc7c2e6147c049831ab4ad837ede2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a86c23f65fd9de16a8c83b16d904002') in 0.005537 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 44.193226 seconds.
+  path: Assets/0_Takanashi/Scenes
+  artifactKey: Guid(2e0ce08108334184688125935ce2a8fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/0_Takanashi/Scenes using Guid(2e0ce08108334184688125935ce2a8fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edc815d01078c187eaa51bb416af7e53') in 0.005345 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.082475 seconds.
+  path: Assets/Scenes
+  artifactKey: Guid(6ea315d0fd7389c41b19996891e99ae3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(6ea315d0fd7389c41b19996891e99ae3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc172811d573b296104adb4d2728db37') in 0.001549 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.800463 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f2dbbc1cedfd0107ca1ad38e8220053') in 0.005178 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.186622 seconds.
+  path: Assets/0_Takanashi/CH/01/FBX/CH.fbx
   artifactKey: Guid(e78e2d77d8b82dc4c932295e9ac953b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/0_Takanashi/CH/01/CH.fbx using Guid(e78e2d77d8b82dc4c932295e9ac953b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1e507ed2c17b3dda68b746a8f33693f') in 0.118997 seconds 
+Start importing Assets/0_Takanashi/CH/01/FBX/CH.fbx using Guid(e78e2d77d8b82dc4c932295e9ac953b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '920fc4aef940fae99fe57a37fb642613') in 0.055296 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.655604 seconds.
+  path: Assets/0_Takanashi/Scenes/Takanashi_Model.unity
+  artifactKey: Guid(8fe82d5867e1f3f4eb5a44fb2d3bb756) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/0_Takanashi/Scenes/Takanashi_Model.unity using Guid(8fe82d5867e1f3f4eb5a44fb2d3bb756) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc9d554880d3e3f5e25479a0bd43fc77') in 0.004603 seconds 
