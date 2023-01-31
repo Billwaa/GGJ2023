@@ -358,6 +358,9 @@
 "Assets/DynamicBone/Scripts/DynamicBoneColliderBase.cs"
 "Assets/DynamicBone/Scripts/DynamicBonePlaneCollider.cs"
 "Assets/Script/NavMeshController.cs"
+"Assets/Script/PlayerController.cs"
+"Assets/Script/Skill.cs"
+"Assets/Script/Skillset.cs"
 -langversion:9.0
 
 /deterministic
