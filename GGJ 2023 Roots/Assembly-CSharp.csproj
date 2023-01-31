@@ -59,12 +59,13 @@
     <Compile Include="Assets\DynamicBone\Scripts\DynamicBonePlaneCollider.cs" />
     <Compile Include="Assets\DynamicBone\Demo\DynamicBoneDemo1.cs" />
     <Compile Include="Assets\Script\NavMeshController.cs" />
+    <Compile Include="Assets\Script\PlayerController.cs" />
+    <Compile Include="Assets\Script\Skill.cs" />
     <Compile Include="Assets\DynamicBone\Scripts\DynamicBone.cs" />
     <Compile Include="Assets\DynamicBone\Scripts\DynamicBoneCollider.cs" />
     <Compile Include="Assets\DynamicBone\Scripts\DynamicBoneColliderBase.cs" />
-    <Compile Include="Assets\Script\PlayerController.cs" />
-    <Compile Include="Assets\Script\Skill.cs" />
     <Compile Include="Assets\Script\Skillset.cs" />
+    <Compile Include="Assets\Script\PlayerManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Toon\Shader\Toon_DoubleShadeWithFeather_Mobile_TransClipping_StencilMask.shader" />

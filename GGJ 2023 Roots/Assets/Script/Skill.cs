@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-public class Skill : MonoBehaviour
+public class Skill 
 {
     public int SkillID;
     public string SkillName;
