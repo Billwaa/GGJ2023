@@ -21,6 +21,6 @@ public class NavMeshController : MonoBehaviour
     void Update()
     {
         agent.SetDestination(target.position);
-        Input.GetKey(KeyCode.A)
+        Input.GetKey(KeyCode.A);
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Skill : MonoBehaviour
 {
@@ -14,5 +15,5 @@ public class Skill : MonoBehaviour
     public float SkillShootSpeed;
     public float SkillAutoAimTime;
     public bool SkillAutoAimActive;
-
+    public Texture2D SkillEmoji;
 }
