@@ -57,15 +57,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\DynamicBone\Scripts\DynamicBonePlaneCollider.cs" />
+    <Compile Include="Assets\Script\PlayerManager.cs" />
     <Compile Include="Assets\DynamicBone\Demo\DynamicBoneDemo1.cs" />
     <Compile Include="Assets\Script\NavMeshController.cs" />
+    <Compile Include="Assets\RealToon\RealToon Tools\SmoothObjectNormalHelper.cs" />
     <Compile Include="Assets\Script\PlayerController.cs" />
     <Compile Include="Assets\Script\Skill.cs" />
+    <Compile Include="Assets\RealToon\RealToon Tools\FrameByFrameRendering\FrameByFrameRendering_Manual.cs" />
+    <Compile Include="Assets\RealToon\RealToon Tools\CustomShadowResolution.cs" />
     <Compile Include="Assets\DynamicBone\Scripts\DynamicBone.cs" />
+    <Compile Include="Assets\RealToon\RealToon Tools\FrameByFrameRendering\FrameByFrameRendering_Default.cs" />
+    <Compile Include="Assets\RealToon\RealToon Shaders\Effects\Sobel Outline\RealToonSobelOutline.cs" />
     <Compile Include="Assets\DynamicBone\Scripts\DynamicBoneCollider.cs" />
     <Compile Include="Assets\DynamicBone\Scripts\DynamicBoneColliderBase.cs" />
     <Compile Include="Assets\Script\Skillset.cs" />
-    <Compile Include="Assets\Script\PlayerManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Toon\Shader\Toon_DoubleShadeWithFeather_Mobile_TransClipping_StencilMask.shader" />
@@ -84,10 +89,15 @@
     <None Include="Assets\Toon\Shader\Tess\ToonColor_DoubleShadeWithFeather_Tess_StencilOut.shader" />
     <None Include="Assets\Toon\Shader\Tess\UCTS_Outline_Tess.cginc" />
     <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap_AngelRing_TransClipping_StencilOut.shader" />
+    <None Include="Assets\RealToon\RealToon Shaders\Version 5\Default\D_Default.shader" />
+    <None Include="Assets\RealToon\RealToon Shaders\Version 5\Tessellation\T_Fade_Transparency.shader" />
     <None Include="Assets\Toon\Shader\Toon_OutlineObject.shader" />
     <None Include="Assets\Toon\Shader\Tess\UCTS_ShadowCaster_Tess.cginc" />
+    <None Include="Assets\RealToon\For VRoid-VRM users.txt" />
     <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap_StencilOut.shader" />
     <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap_AngelRing_TransClipping.shader" />
+    <None Include="Assets\RealToon\RealToon Shader Packages\SRP (LWRP - URP - HDRP)\URP\Please read before you unpack or import.txt" />
+    <None Include="Assets\RealToon\What&apos;s New.txt" />
     <None Include="Assets\Toon\Shader\Tess\ToonColor_DoubleShadeWithFeather_Transparent_Tess_StencilOut.shader" />
     <None Include="Assets\Toon\Shader\Toon_DoubleShadeWithFeather_StencilMask.shader" />
     <None Include="Assets\Toon\Shader\Tess\UCTS_Tess.cginc" />
@@ -102,6 +112,7 @@
     <None Include="Assets\Toon\Shader\Toon_DoubleShadeWithFeather_Clipping.shader" />
     <None Include="Assets\Toon\Shader\Tess\Toon_ShadingGradeMap_AngelRing_TransClipping_Tess.shader" />
     <None Include="Assets\Toon\Shader\ToonColor_ShadingGradeMap_StencilMask.shader" />
+    <None Include="Assets\RealToon\RealToon Shader Packages\SRP (LWRP - URP - HDRP)\HDRP\Please read before you unpack or import.txt" />
     <None Include="Assets\Toon\Shader\Tess\Toon_DoubleShadeWithFeather_Clipping_Tess_StencilOut.shader" />
     <None Include="Assets\Toon\Shader\Toon_DoubleShadeWithFeather_Mobile_TransClipping.shader" />
     <None Include="Assets\Toon\Shader\Tess\Toon_ShadingGradeMap_AngelRing_TransClipping_Tess_StencilOut.shader" />
@@ -115,9 +126,11 @@
     <None Include="Assets\Toon\Shader\Tess\Toon_ShadingGradeMap_Tess_StencilOut.shader" />
     <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap_TransClipping_StencilOut.shader" />
     <None Include="Assets\Toon\Shader\ToonColor_ShadingGradeMap_Transparent.shader" />
+    <None Include="Assets\RealToon\RealToon Shaders\Version 5\Default\D_Refraction.shader" />
     <None Include="Assets\Toon\Shader\ToonColor_DoubleShadeWithFeather_Transparent.shader" />
     <None Include="Assets\Toon\Shader\Tess\ToonColor_DoubleShadeWithFeather_Tess_StencilMask.shader" />
     <None Include="Assets\Toon\Shader\Tess\ToonColor_DoubleShadeWithFeather_TransClipping_Tess_StencilOut.shader" />
+    <None Include="Assets\RealToon\RealToon Shaders\Version 5\Default\D_Fade_Transparency.shader" />
     <None Include="Assets\Toon\Shader\ToonColor_DoubleShadeWithFeather_Clipping_StencilOut.shader" />
     <None Include="Assets\Toon\Shader\Tess\Toon_DoubleShadeWithFeather_Tess_StencilMask.shader" />
     <None Include="Assets\Toon\Shader\Tess\Toon_ShadingGradeMap_TransClipping_Tess_StencilOut.shader" />
@@ -136,11 +149,13 @@
     <None Include="Assets\Toon\Shader\ToonColor_ShadingGradeMap_AngelRing.shader" />
     <None Include="Assets\Toon\Shader\Tess\Toon_ShadingGradeMap_AngelRing_Tess_Light_StencilOut.shader" />
     <None Include="Assets\Toon\Shader\Toon_DoubleShadeWithFeather_TransClipping_StencilMask.shader" />
+    <None Include="Assets\RealToon\RealToon Shaders\Version 5\Lite\L_Default.shader" />
     <None Include="Assets\Toon\Shader\Tess\ToonColor_DoubleShadeWithFeather_Tess.shader" />
     <None Include="Assets\Toon\Shader\Tess\Toon_DoubleShadeWithFeather_Tess_StencilOut.shader" />
     <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap_Mobile.shader" />
     <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap_TransClipping_StencilMask.shader" />
     <None Include="Assets\Toon\Shader\Toon_DoubleShadeWithFeather_StencilOut.shader" />
+    <None Include="Assets\RealToon\ReadMe - Important - Guide.txt" />
     <None Include="Assets\Toon\Shader\Tess\Toon_DoubleShadeWithFeather_TransClipping_Tess_StencilOut.shader" />
     <None Include="Assets\Toon\Shader\Tess\Toon_ShadingGradeMap_AngelRing_Tess.shader" />
     <None Include="Assets\Toon\Shader\Tess\ToonColor_DoubleShadeWithFeather_TransClipping_Tess_StencilMask.shader" />
@@ -148,20 +163,24 @@
     <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap_AngelRing.shader" />
     <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap_StencilMask.shader" />
     <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap.shader" />
+    <None Include="Assets\RealToon\RealToon Shader Packages\SRP (LWRP - URP - HDRP)\HDRP\RealToon HDRP (Quick Guide).txt" />
     <None Include="Assets\Toon\Shader\ToonColor_DoubleShadeWithFeather_Transparent_StencilOut.shader" />
     <None Include="Assets\Toon\Shader\Tess\ToonColor_DoubleShadeWithFeather_Clipping_Tess.shader" />
     <None Include="Assets\Toon\Shader\ToonColor_ShadingGradeMap_TransClipping_StencilMask.shader" />
     <None Include="Assets\Toon\Shader\Toon_DoubleShadeWithFeather.shader" />
     <None Include="Assets\Toon\Shader\Toon_DoubleShadeWithFeather_TransClipping_StencilOut.shader" />
     <None Include="Assets\Toon\Shader\Tess\ToonColor_DoubleShadeWithFeather_Transparent_Tess.shader" />
+    <None Include="Assets\RealToon\RealToon Shaders\Version 5\Lite\L_Fade_Transparency.shader" />
     <None Include="Assets\Toon\Shader\Tess\ToonColor_ShadingGradeMap_TransClipping_Tess.shader" />
     <None Include="Assets\Toon\Shader\README.txt" />
+    <None Include="Assets\RealToon\RealToon Shaders\Version 5\Tessellation\T_Refraction.shader" />
     <None Include="Assets\Toon\Shader\Tess\ToonColor_ShadingGradeMap_AngelRing_Tess_StencilOut.shader" />
     <None Include="Assets\Toon\Shader\Tess\Toon_DoubleShadeWithFeather_Clipping_Tess_StencilMask.shader" />
     <None Include="Assets\Toon\Shader\Tess\ToonColor_ShadingGradeMap_Tess_StencilOut.shader" />
     <None Include="Assets\Toon\Shader\ToonColor_DoubleShadeWithFeather_Clipping_StencilMask.shader" />
     <None Include="Assets\Toon\Shader\ToonColor_DoubleShadeWithFeather_Clipping.shader" />
     <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap_Mobile_TransClipping.shader" />
+    <None Include="Assets\RealToon\Change - Fix Log.txt" />
     <None Include="Assets\Toon\Shader\UCTS_ShadingGradeMap.cginc" />
     <None Include="Assets\Toon\Shader\UCTS_Outline.cginc" />
     <None Include="Assets\Toon\Shader\Tess\Toon_ShadingGradeMap_Tess_StencilMask.shader" />
@@ -174,6 +193,7 @@
     <None Include="Assets\DynamicBone\ReadMe.txt" />
     <None Include="Assets\Toon\Shader\ToonColor_ShadingGradeMap_TransClipping.shader" />
     <None Include="Assets\Toon\Shader\Toon_DoubleShadeWithFeather_Clipping_StencilOut.shader" />
+    <None Include="Assets\RealToon\RealToon Shaders\Version 5\Tessellation\T_Default.shader" />
     <None Include="Assets\Toon\Shader\ToonColor_DoubleShadeWithFeather_StencilOut.shader" />
     <None Include="Assets\Toon\Shader\Toon_OutlineObject_StencilOut.shader" />
     <None Include="Assets\Toon\Shader\Tess\Toon_DoubleShadeWithFeather_Tess_Light_StencilOut.shader" />
@@ -182,9 +202,11 @@
     <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap_TransClipping.shader" />
     <None Include="Assets\Toon\Shader\ToonColor_ShadingGradeMap_Transparent_StencilOut.shader" />
     <None Include="Assets\Toon\Shader\Toon_DoubleShadeWithFeather_Mobile_StencilMask.shader" />
+    <None Include="Assets\RealToon\RealToon Shaders\Effects\Sobel Outline\Shader\RealToon_Sobel_Outline_FX.shader" />
     <None Include="Assets\Toon\Shader\Tess\Toon_ShadingGradeMap_TransClipping_Tess.shader" />
     <None Include="Assets\Toon\Shader\Tess\Toon_DoubleShadeWithFeather_Tess.shader" />
     <None Include="Assets\Toon\Shader\Tess\Toon_DoubleShadeWithFeather_TransClipping_Tess.shader" />
+    <None Include="Assets\RealToon\RealToon Shader Packages\SRP (LWRP - URP - HDRP)\LWRP\Please read before you unpack or import.txt" />
     <None Include="Assets\Toon\Shader\ToonColor_ShadingGradeMap.shader" />
     <None Include="Assets\Toon\Shader\Tess\ToonColor_ShadingGradeMap_TransClipping_Tess_StencilMask.shader" />
     <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap_Mobile_StencilOut.shader" />

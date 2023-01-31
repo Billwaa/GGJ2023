@@ -5,10 +5,15 @@ using UnityEngine.UI;
 
 public class Skillset : MonoBehaviour
 {
-    Skill[] skillset = new Skill[4];
-    public Texture2D skill0Emoji;
+    public Skill[] skillset = new Skill[5];
+    public Texture2D[] skillEmoji = new Texture2D[5];
+
     void Start()
     {
+        // Initialize Skills
+        for (int i = 0; i < skillset.Length; i++)
+            skillset[i] = new Skill();
+
         //Skill 0
         skillset[0].SkillID = 0;
         skillset[0].SkillName = "Ivy";
@@ -20,7 +25,7 @@ public class Skillset : MonoBehaviour
         skillset[0].SkillShootSpeed = 20;
         skillset[0].SkillAutoAimTime = 5;
         skillset[0].SkillAutoAimActive = true;
-        skillset[0].SkillEmoji = skill0Emoji;
+        skillset[0].SkillEmoji = skillEmoji[0];
 
         //Skill 1
         skillset[1].SkillID = 1;
@@ -33,7 +38,7 @@ public class Skillset : MonoBehaviour
         skillset[1].SkillShootSpeed = 20;
         skillset[1].SkillAutoAimTime = 5;
         skillset[1].SkillAutoAimActive = true;
-        skillset[1].SkillEmoji = null;
+        skillset[1].SkillEmoji = skillEmoji[1];
 
         //Skill 2
         skillset[2].SkillID = 2;
@@ -46,7 +51,7 @@ public class Skillset : MonoBehaviour
         skillset[2].SkillShootSpeed = 20;
         skillset[2].SkillAutoAimTime = 5;
         skillset[2].SkillAutoAimActive = true;
-        skillset[2].SkillEmoji = null;
+        skillset[2].SkillEmoji = skillEmoji[2];
 
         //Skill 3
         skillset[3].SkillID = 3;
@@ -59,7 +64,7 @@ public class Skillset : MonoBehaviour
         skillset[3].SkillShootSpeed = 20;
         skillset[3].SkillAutoAimTime = 0;
         skillset[3].SkillAutoAimActive = false;
-        skillset[3].SkillEmoji = null;
+        skillset[3].SkillEmoji = skillEmoji[3];
 
         //Skill 4
         skillset[4].SkillID = 4;
@@ -72,7 +77,7 @@ public class Skillset : MonoBehaviour
         skillset[4].SkillShootSpeed = 20;
         skillset[4].SkillAutoAimTime = 0;
         skillset[4].SkillAutoAimActive = false;
-        skillset[4].SkillEmoji = null;
+        skillset[4].SkillEmoji = skillEmoji[4];
     }
 
 }
