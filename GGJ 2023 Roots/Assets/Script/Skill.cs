@@ -1,3 +1,4 @@
+using UnityEngine.UI;
 
 public class Skill 
 {
@@ -11,5 +12,5 @@ public class Skill
     public float SkillShootSpeed;
     public float SkillAutoAimTime;
     public bool SkillAutoAimActive;
-
+    public Texture2D SkillEmoji;
 }
