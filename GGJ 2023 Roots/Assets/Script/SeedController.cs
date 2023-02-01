@@ -18,6 +18,9 @@ public class SeedController : MonoBehaviour
 
     Animator animator;
 
+    bool locked = false;
+    int lastPlayerID = -1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,23 +30,82 @@ public class SeedController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         playerController = playerManager.playerList;
 
-        float minDist = 999;
-        int minID = -1;
-
-        for (int i = 0; i < playerController.Count; i++)
+        if (!locked)
         {
-            float mag = (playerController[i].transform.position - this.transform.position).magnitude;
+            this.transform.parent = null;
 
-            if (mag < minDist)
+            if (lastPlayerID != -1)
             {
-                minDist = mag;
-                minID = i;
+                playerController[lastPlayerID].hasSeed = false;
+                playerController[lastPlayerID].seedController = null;
+
+            }
+
+            agent.enabled = true;
+
+            float minDist = 999;
+            int minID = -1;
+
+            for (int i = 0; i < playerController.Count; i++)
+            {
+                if (playerController[i].isDead || playerController[i].PlayerId == lastPlayerID)
+                    continue;
+
+                float mag = (playerController[i].transform.position - this.transform.position).magnitude;
+
+                if (mag < minDist)
+                {
+                    minDist = mag;
+                    minID = i;
+                }
+            }
+
+            if (minID > -1)
+                agent.SetDestination(playerController[minID].transform.position);
+            else
+                agent.SetDestination(new Vector3(0, 2, 0));
+        }
+        else
+        {
+            agent.enabled = false;
+
+            if (playerController[lastPlayerID].isDead)
+            {
+                locked = false;
             }
         }
+       
+    }
 
-        if (minID > -1)
-            agent.SetDestination(playerController[minID].transform.position);
+    public void nextTarget()
+    {
+        locked = false;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            PlayerController player = collision.gameObject.GetComponent<PlayerController>();
+            Debug.Log("collision");
+            if (!player.isDead)
+                if (player.PlayerId != lastPlayerID)
+                {
+                    agent.enabled = false;
+                    locked = true;
+                    lastPlayerID = collision.transform.GetComponent<PlayerController>().PlayerId;
+                    player.hasSeed = true;
+                    player.seedController = this;
+                    player.passCooldownTimer = 5; // 5 sec before pass
+                    this.transform.parent = collision.transform;
+                    this.transform.localPosition = new Vector3(0, 3, 0);
+                    this.transform.rotation = Quaternion.Euler(-90, 0, 0);
+                    Debug.Log("hit");
+                }
+      
+        }
     }
 }
