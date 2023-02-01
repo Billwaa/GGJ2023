@@ -37,12 +37,20 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\DynamicBone\Scripts\DynamicBonePlaneCollider.cs" />
+     <Compile Include="Assets\Script\PlayerManager.cs" />
      <Compile Include="Assets\DynamicBone\Demo\DynamicBoneDemo1.cs" />
      <Compile Include="Assets\Script\NavMeshController.cs" />
-     <Compile Include="Assets\Script\CharacterSelect.cs" />
+     <Compile Include="Assets\RealToon\RealToon Tools\SmoothObjectNormalHelper.cs" />
+     <Compile Include="Assets\Script\PlayerController.cs" />
+     <Compile Include="Assets\Script\Skill.cs" />
+     <Compile Include="Assets\RealToon\RealToon Tools\FrameByFrameRendering\FrameByFrameRendering_Manual.cs" />
+     <Compile Include="Assets\RealToon\RealToon Tools\CustomShadowResolution.cs" />
      <Compile Include="Assets\DynamicBone\Scripts\DynamicBone.cs" />
+     <Compile Include="Assets\RealToon\RealToon Tools\FrameByFrameRendering\FrameByFrameRendering_Default.cs" />
+     <Compile Include="Assets\RealToon\RealToon Shaders\Effects\Sobel Outline\RealToonSobelOutline.cs" />
      <Compile Include="Assets\DynamicBone\Scripts\DynamicBoneCollider.cs" />
      <Compile Include="Assets\DynamicBone\Scripts\DynamicBoneColliderBase.cs" />
+     <Compile Include="Assets\Script\Skillset.cs" />
      <None Include="Assets\Toon\Shader\Toon_DoubleShadeWithFeather_Mobile_TransClipping_StencilMask.shader" />
      <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap_Mobile_StencilMask.shader" />
      <None Include="Assets\Toon\Shader\Tess\Toon_DoubleShadeWithFeather_Tess_Light_StencilMask.shader" />
@@ -59,15 +67,21 @@
      <None Include="Assets\Toon\Shader\Tess\ToonColor_DoubleShadeWithFeather_Tess_StencilOut.shader" />
      <None Include="Assets\Toon\Shader\Tess\UCTS_Outline_Tess.cginc" />
      <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap_AngelRing_TransClipping_StencilOut.shader" />
+     <None Include="Assets\RealToon\RealToon Shaders\Version 5\Default\D_Default.shader" />
+     <None Include="Assets\RealToon\RealToon Shaders\Version 5\Tessellation\T_Fade_Transparency.shader" />
      <None Include="Assets\Toon\Shader\Toon_OutlineObject.shader" />
      <None Include="Assets\Toon\Shader\Tess\UCTS_ShadowCaster_Tess.cginc" />
+     <None Include="Assets\RealToon\For VRoid-VRM users.txt" />
      <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap_StencilOut.shader" />
      <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap_AngelRing_TransClipping.shader" />
+     <None Include="Assets\RealToon\RealToon Shader Packages\SRP (LWRP - URP - HDRP)\URP\Please read before you unpack or import.txt" />
+     <None Include="Assets\RealToon\What&apos;s New.txt" />
      <None Include="Assets\Toon\Shader\Tess\ToonColor_DoubleShadeWithFeather_Transparent_Tess_StencilOut.shader" />
      <None Include="Assets\Toon\Shader\Toon_DoubleShadeWithFeather_StencilMask.shader" />
      <None Include="Assets\Toon\Shader\Tess\UCTS_Tess.cginc" />
      <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap_AngelRing_Mobile.shader" />
      <None Include="Assets\Toon\Shader\ToonColor_DoubleShadeWithFeather_TransClipping_StencilOut.shader" />
+     <None Include="Assets\Fantasy Skybox FREE\Readme.txt" />
      <None Include="Assets\Toon\Shader\Tess\Toon_DoubleShadeWithFeather_Tess_Light.shader" />
      <None Include="Assets\Toon\Shader\ToonColor_ShadingGradeMap_StencilOut.shader" />
      <None Include="Assets\Toon\Shader\Tess\ToonColor_ShadingGradeMap_AngelRing_Tess_TransClipping.shader" />
@@ -77,9 +91,11 @@
      <None Include="Assets\Toon\Shader\Toon_DoubleShadeWithFeather_Clipping.shader" />
      <None Include="Assets\Toon\Shader\Tess\Toon_ShadingGradeMap_AngelRing_TransClipping_Tess.shader" />
      <None Include="Assets\Toon\Shader\ToonColor_ShadingGradeMap_StencilMask.shader" />
+     <None Include="Assets\RealToon\RealToon Shader Packages\SRP (LWRP - URP - HDRP)\HDRP\Please read before you unpack or import.txt" />
      <None Include="Assets\Toon\Shader\Tess\Toon_DoubleShadeWithFeather_Clipping_Tess_StencilOut.shader" />
      <None Include="Assets\Toon\Shader\Toon_DoubleShadeWithFeather_Mobile_TransClipping.shader" />
      <None Include="Assets\Toon\Shader\Tess\Toon_ShadingGradeMap_AngelRing_TransClipping_Tess_StencilOut.shader" />
+     <None Include="Assets\Fantasy Skybox FREE\ReleaseNotes.txt" />
      <None Include="Assets\Toon\Shader\Tess\Toon_ShadingGradeMap_Tess_Light.shader" />
      <None Include="Assets\Toon\Shader\Toon_DoubleShadeWithFeather_Mobile_StencilOut.shader" />
      <None Include="Assets\Toon\Shader\ToonColor_ShadingGradeMap_AngelRing_TransClipping_StencilOut.shader" />
@@ -90,9 +106,11 @@
      <None Include="Assets\Toon\Shader\Tess\Toon_ShadingGradeMap_Tess_StencilOut.shader" />
      <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap_TransClipping_StencilOut.shader" />
      <None Include="Assets\Toon\Shader\ToonColor_ShadingGradeMap_Transparent.shader" />
+     <None Include="Assets\RealToon\RealToon Shaders\Version 5\Default\D_Refraction.shader" />
      <None Include="Assets\Toon\Shader\ToonColor_DoubleShadeWithFeather_Transparent.shader" />
      <None Include="Assets\Toon\Shader\Tess\ToonColor_DoubleShadeWithFeather_Tess_StencilMask.shader" />
      <None Include="Assets\Toon\Shader\Tess\ToonColor_DoubleShadeWithFeather_TransClipping_Tess_StencilOut.shader" />
+     <None Include="Assets\RealToon\RealToon Shaders\Version 5\Default\D_Fade_Transparency.shader" />
      <None Include="Assets\Toon\Shader\ToonColor_DoubleShadeWithFeather_Clipping_StencilOut.shader" />
      <None Include="Assets\Toon\Shader\Tess\Toon_DoubleShadeWithFeather_Tess_StencilMask.shader" />
      <None Include="Assets\Toon\Shader\Tess\Toon_ShadingGradeMap_TransClipping_Tess_StencilOut.shader" />
@@ -111,11 +129,13 @@
      <None Include="Assets\Toon\Shader\ToonColor_ShadingGradeMap_AngelRing.shader" />
      <None Include="Assets\Toon\Shader\Tess\Toon_ShadingGradeMap_AngelRing_Tess_Light_StencilOut.shader" />
      <None Include="Assets\Toon\Shader\Toon_DoubleShadeWithFeather_TransClipping_StencilMask.shader" />
+     <None Include="Assets\RealToon\RealToon Shaders\Version 5\Lite\L_Default.shader" />
      <None Include="Assets\Toon\Shader\Tess\ToonColor_DoubleShadeWithFeather_Tess.shader" />
      <None Include="Assets\Toon\Shader\Tess\Toon_DoubleShadeWithFeather_Tess_StencilOut.shader" />
      <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap_Mobile.shader" />
      <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap_TransClipping_StencilMask.shader" />
      <None Include="Assets\Toon\Shader\Toon_DoubleShadeWithFeather_StencilOut.shader" />
+     <None Include="Assets\RealToon\ReadMe - Important - Guide.txt" />
      <None Include="Assets\Toon\Shader\Tess\Toon_DoubleShadeWithFeather_TransClipping_Tess_StencilOut.shader" />
      <None Include="Assets\Toon\Shader\Tess\Toon_ShadingGradeMap_AngelRing_Tess.shader" />
      <None Include="Assets\Toon\Shader\Tess\ToonColor_DoubleShadeWithFeather_TransClipping_Tess_StencilMask.shader" />
@@ -123,20 +143,24 @@
      <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap_AngelRing.shader" />
      <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap_StencilMask.shader" />
      <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap.shader" />
+     <None Include="Assets\RealToon\RealToon Shader Packages\SRP (LWRP - URP - HDRP)\HDRP\RealToon HDRP (Quick Guide).txt" />
      <None Include="Assets\Toon\Shader\ToonColor_DoubleShadeWithFeather_Transparent_StencilOut.shader" />
      <None Include="Assets\Toon\Shader\Tess\ToonColor_DoubleShadeWithFeather_Clipping_Tess.shader" />
      <None Include="Assets\Toon\Shader\ToonColor_ShadingGradeMap_TransClipping_StencilMask.shader" />
      <None Include="Assets\Toon\Shader\Toon_DoubleShadeWithFeather.shader" />
      <None Include="Assets\Toon\Shader\Toon_DoubleShadeWithFeather_TransClipping_StencilOut.shader" />
      <None Include="Assets\Toon\Shader\Tess\ToonColor_DoubleShadeWithFeather_Transparent_Tess.shader" />
+     <None Include="Assets\RealToon\RealToon Shaders\Version 5\Lite\L_Fade_Transparency.shader" />
      <None Include="Assets\Toon\Shader\Tess\ToonColor_ShadingGradeMap_TransClipping_Tess.shader" />
      <None Include="Assets\Toon\Shader\README.txt" />
+     <None Include="Assets\RealToon\RealToon Shaders\Version 5\Tessellation\T_Refraction.shader" />
      <None Include="Assets\Toon\Shader\Tess\ToonColor_ShadingGradeMap_AngelRing_Tess_StencilOut.shader" />
      <None Include="Assets\Toon\Shader\Tess\Toon_DoubleShadeWithFeather_Clipping_Tess_StencilMask.shader" />
      <None Include="Assets\Toon\Shader\Tess\ToonColor_ShadingGradeMap_Tess_StencilOut.shader" />
      <None Include="Assets\Toon\Shader\ToonColor_DoubleShadeWithFeather_Clipping_StencilMask.shader" />
      <None Include="Assets\Toon\Shader\ToonColor_DoubleShadeWithFeather_Clipping.shader" />
      <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap_Mobile_TransClipping.shader" />
+     <None Include="Assets\RealToon\Change - Fix Log.txt" />
      <None Include="Assets\Toon\Shader\UCTS_ShadingGradeMap.cginc" />
      <None Include="Assets\Toon\Shader\UCTS_Outline.cginc" />
      <None Include="Assets\Toon\Shader\Tess\Toon_ShadingGradeMap_Tess_StencilMask.shader" />
@@ -149,6 +173,7 @@
      <None Include="Assets\DynamicBone\ReadMe.txt" />
      <None Include="Assets\Toon\Shader\ToonColor_ShadingGradeMap_TransClipping.shader" />
      <None Include="Assets\Toon\Shader\Toon_DoubleShadeWithFeather_Clipping_StencilOut.shader" />
+     <None Include="Assets\RealToon\RealToon Shaders\Version 5\Tessellation\T_Default.shader" />
      <None Include="Assets\Toon\Shader\ToonColor_DoubleShadeWithFeather_StencilOut.shader" />
      <None Include="Assets\Toon\Shader\Toon_OutlineObject_StencilOut.shader" />
      <None Include="Assets\Toon\Shader\Tess\Toon_DoubleShadeWithFeather_Tess_Light_StencilOut.shader" />
@@ -157,9 +182,11 @@
      <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap_TransClipping.shader" />
      <None Include="Assets\Toon\Shader\ToonColor_ShadingGradeMap_Transparent_StencilOut.shader" />
      <None Include="Assets\Toon\Shader\Toon_DoubleShadeWithFeather_Mobile_StencilMask.shader" />
+     <None Include="Assets\RealToon\RealToon Shaders\Effects\Sobel Outline\Shader\RealToon_Sobel_Outline_FX.shader" />
      <None Include="Assets\Toon\Shader\Tess\Toon_ShadingGradeMap_TransClipping_Tess.shader" />
      <None Include="Assets\Toon\Shader\Tess\Toon_DoubleShadeWithFeather_Tess.shader" />
      <None Include="Assets\Toon\Shader\Tess\Toon_DoubleShadeWithFeather_TransClipping_Tess.shader" />
+     <None Include="Assets\RealToon\RealToon Shader Packages\SRP (LWRP - URP - HDRP)\LWRP\Please read before you unpack or import.txt" />
      <None Include="Assets\Toon\Shader\ToonColor_ShadingGradeMap.shader" />
      <None Include="Assets\Toon\Shader\Tess\ToonColor_ShadingGradeMap_TransClipping_Tess_StencilMask.shader" />
      <None Include="Assets\Toon\Shader\Toon_ShadingGradeMap_Mobile_StencilOut.shader" />
@@ -411,13 +438,13 @@
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.17f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="ReportGeneratorMerged">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\PackageCache\com.unity.testtools.codecoverage@1.2.2\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\PackageCache\com.unity.testtools.codecoverage@1.2.2\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.17f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -786,88 +813,88 @@
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.17f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow.Editor">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core.Editor">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
     </Reference>
     <Reference Include="Unity.EditorCoroutines.Editor">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core.Analytics">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core.Environments">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
-        <HintPath>C:\Users\user\Desktop\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+        <HintPath>C:\Users\Heman\Documents\GitHub\GGJ2023\GGJ 2023 Roots\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
