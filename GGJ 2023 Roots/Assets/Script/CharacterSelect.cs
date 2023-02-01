@@ -15,15 +15,32 @@ public class CharacterSelect : MonoBehaviour
         
     }
 
+        public void PreviousCharacter(){
+        characters[selectedCharacter].SetActive(false);
+        selectedCharacter--;
+
+        if (selectedCharacter < 0){
+            selectedCharacter += characters.Length;
+        }
+        
+        characters[selectedCharacter].SetActive(true);
+        
+    }
+
+
     void FixedUpdate()
     {
         if (Input.GetButtonDown("Jump"))
         {
             NextCharacter();
-            Debug.Log("123");
+            Debug.Log("Triggered next Char");
+        }else if (Input.GetButtonDown("Fire1"))
+        {
+            PreviousCharacter();
+            Debug.Log("Triggered prev Char");
         }
-
     }
+
     
     public void StartGame()
     {
