@@ -41,6 +41,7 @@
      <Compile Include="Assets\RealToon\Editor\RealToonShaderGUI.cs" />
      <Compile Include="Assets\RealToon\Editor\RealToonShaderGUI_Lite.cs" />
      <Compile Include="Assets\RealToon\Editor\SwapShaderToRealToon.cs" />
+     <Compile Include="Assets\Editor\Instant Screenshot\ScreenshotTaker.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.17f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
