@@ -27,6 +27,8 @@ public class PlayerController : MonoBehaviour
     public bool hasSeed;
     public float speed; // In-Game Speed (including when got skill attacked)
 
+    private Animator animator;
+
     void Start()
     {
         skillCooldownTimer = 0;
@@ -34,7 +36,9 @@ public class PlayerController : MonoBehaviour
         attackedSkill = null;
         attackedSkillTimer = 0;
         hasSeed = false;
-        speed = Speed;        
+        speed = Speed;    
+        
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -54,6 +58,12 @@ public class PlayerController : MonoBehaviour
 
         Vector3 direction = new Vector3(x_input, 0, y_input).normalized;        
         this.transform.position += direction * speed * Time.deltaTime;
+
+        if (direction.magnitude > 0)
+            animator.SetBool("isWalking", true);
+        else
+            animator.SetBool("isWalking", false);
+
         // Debug.Log(direction * speed * Time.deltaTime);
     }
 }
