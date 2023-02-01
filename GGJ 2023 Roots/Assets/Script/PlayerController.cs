@@ -59,11 +59,15 @@ public class PlayerController : MonoBehaviour
         Vector3 direction = new Vector3(x_input, 0, y_input).normalized;        
         this.transform.position += direction * speed * Time.deltaTime;
 
+        float angle = Mathf.Atan2(-direction.x, -direction.z) * 180.0f / Mathf.PI + 180;
+        this.transform.rotation = Quaternion.Euler(0, angle, 0);
+
         if (direction.magnitude > 0)
             animator.SetBool("isWalking", true);
         else
             animator.SetBool("isWalking", false);
 
-        // Debug.Log(direction * speed * Time.deltaTime);
+
+
     }
 }
