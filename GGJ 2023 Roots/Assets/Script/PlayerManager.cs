@@ -21,7 +21,26 @@ public class PlayerManager : MonoBehaviour
 
 
     void Start()
-    {        
+    {   
+
+
+        // Load character array from character selection scene
+        int[] playerCharacters = new int [] {-1,-1,-1,-1};
+        for (int i = 0; i < 4; i++){
+            if (PlayerPrefs.GetString("P"+i.ToString()+"joinStatus")=="true"){
+                playerCharacters[i]=PlayerPrefs.GetInt("P"+i.ToString()+"selectedCharacter");
+            }
+        }
+        Debug.Log("已載入玩家列表: [" +string.Join(",",
+        new List<int>(playerCharacters)
+        .ConvertAll(i => i.ToString()))+"]");
+
+
+
+
+
+
+        
         // Define Player Controls
         PlayerControls[0] = new KeyCode[] { KeyCode.W, KeyCode.S, KeyCode.A, KeyCode.D, KeyCode.Tilde, KeyCode.Tab };
         PlayerControls[1] = new KeyCode[] { KeyCode.UpArrow, KeyCode.DownArrow, KeyCode.LeftArrow, KeyCode.RightArrow, KeyCode.RightShift, KeyCode.RightControl };
