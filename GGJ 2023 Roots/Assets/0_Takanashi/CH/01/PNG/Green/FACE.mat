@@ -214,7 +214,7 @@ Material:
     - _DynamicNoisyOutline: 0
     - _EMISSIVE: 0
     - _EnableTextureTransparent: 0
-    - _EnvironmentalLightingIntensity: 1
+    - _EnvironmentalLightingIntensity: 0.7
     - _FarDistanceMaxWidth: 10
     - _Farthest_Distance: 100
     - _GIFlatShade: 0
