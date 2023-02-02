@@ -14,6 +14,7 @@ Material:
   - N_F_O_ON
   - N_F_RELGI_ON
   - N_F_RL_ON
+  - N_F_SON_ON
   - N_F_SS_ON
   m_InvalidKeywords:
   - L_F_RELGI_ON
@@ -144,7 +145,7 @@ Material:
     - _DstBlend: 0
     - _DynamicNoisyOutline: 0
     - _EnableTextureTransparent: 0
-    - _EnvironmentalLightingIntensity: 1
+    - _EnvironmentalLightingIntensity: 0.7
     - _FReflectionIntensity: 0
     - _FReflectionRoughtness: 0
     - _FarDistanceMaxWidth: 10
@@ -206,7 +207,7 @@ Material:
     - _N_F_RL: 1
     - _N_F_SCT: 0
     - _N_F_SL: 0
-    - _N_F_SON: 0
+    - _N_F_SON: 1
     - _N_F_SS: 1
     - _N_F_ST: 0
     - _N_F_STIAL: 0
@@ -250,11 +251,11 @@ Material:
     - _SelfShadowHardness: 1
     - _SelfShadowIntensity: 1
     - _SelfShadowRealTimeShadowColorPower: 1
-    - _SelfShadowRealtimeShadowIntensity: 1
+    - _SelfShadowRealtimeShadowIntensity: 0
     - _SelfShadowShadowTAtViewDirection: 0
     - _SelfShadowThreshold: 0.717
     - _ShadowColorTexturePower: 0
-    - _ShadowHardness: 0
+    - _ShadowHardness: 1
     - _ShadowTColorPower: 1
     - _ShadowTHardness: 1
     - _ShadowTIntensity: 1
