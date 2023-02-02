@@ -53,8 +53,17 @@ public class CharacterSelectManager : MonoBehaviour
     void BeginGame(){
         errorText.SetActive(false);
         Debug.Log("開始遊戲");
+        Camera.main.GetComponent<CharacterSelectCameraMovement>().startGame();
+        
+        StartCoroutine(LoadScene());
+        
+    }
+    IEnumerator LoadScene()
+    {
+        yield return new WaitForSeconds(2);
         SceneManager.LoadScene("Billy Test Scene",LoadSceneMode.Single);
     }
+
         
     void Update()
     {
