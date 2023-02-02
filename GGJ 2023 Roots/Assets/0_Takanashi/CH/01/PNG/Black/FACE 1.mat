@@ -132,7 +132,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OutlineWidthControl:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 1bd501743a0a644459644c5dbaf93942, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Outline_Sampler:
@@ -311,7 +311,7 @@ Material:
     - _OutlineExtrudeMethod: 0
     - _OutlineWidth: 0.2
     - _OutlineWidthAffectedByViewDistance: 0
-    - _OutlineZPostionInCamera: 0
+    - _OutlineZPostionInCamera: 1.4
     - _Outline_Width: 1
     - _OverallShadowColorPower: 1
     - _PSGLOTEX: 0

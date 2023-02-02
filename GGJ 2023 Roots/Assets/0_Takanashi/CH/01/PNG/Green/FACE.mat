@@ -13,6 +13,7 @@ Material:
   - N_F_O_ON
   - N_F_RELGI_ON
   - N_F_RL_ON
+  - N_F_SON_ON
   - N_F_SS_ON
   m_InvalidKeywords:
   - _
@@ -294,7 +295,7 @@ Material:
     - _N_F_RL: 1
     - _N_F_SCT: 0
     - _N_F_SL: 0
-    - _N_F_SON: 0
+    - _N_F_SON: 1
     - _N_F_SS: 1
     - _N_F_ST: 0
     - _N_F_STIAL: 0
@@ -311,7 +312,7 @@ Material:
     - _OutlineExtrudeMethod: 0
     - _OutlineWidth: 0.2
     - _OutlineWidthAffectedByViewDistance: 0
-    - _OutlineZPostionInCamera: 0
+    - _OutlineZPostionInCamera: 1.4
     - _Outline_Width: 1
     - _OverallShadowColorPower: 1
     - _PSGLOTEX: 0
