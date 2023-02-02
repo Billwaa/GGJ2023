@@ -114,7 +114,7 @@ public class CharacterSelect : MonoBehaviour
     void Update()
     {
         if (Input.GetButtonDown("P"+(playerPosition+1).ToString()+"A"))
-        {
+        {            Debug.Log("P"+playerPosition.ToString()+"Triggered Confirm");
             Confirm();
             Debug.Log("P"+playerPosition.ToString()+"Triggered Confirm");
         }
