@@ -572,8 +572,8 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: GGJ 2023 Roots
-  metroPackageVersion: 
+  metroPackageName: GGJ2023Roots
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -581,7 +581,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: GGJ 2023 Roots
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: GGJ 2023 Roots
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
