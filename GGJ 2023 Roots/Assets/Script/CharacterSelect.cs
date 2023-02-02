@@ -36,9 +36,9 @@ public class CharacterSelect : MonoBehaviour
     }
 
     private void Start() {
-        joinText.GetComponent<TextMeshProUGUI>().text="Press "+confirmKeyMap[playerPosition]+" to Join";
-        retireText1.GetComponent<TextMeshProUGUI>().text="Press "+cancelKeyMap[playerPosition]+" to Retire";
-        retireText2.GetComponent<TextMeshProUGUI>().text="Press "+cancelKeyMap[playerPosition]+" to Retire";
+        joinText.GetComponent<TextMeshProUGUI>().text=confirmKeyMap[playerPosition]+" to Join";
+        retireText1.GetComponent<TextMeshProUGUI>().text=cancelKeyMap[playerPosition]+" to Cancel";
+        retireText2.GetComponent<TextMeshProUGUI>().text=cancelKeyMap[playerPosition]+" to Cancel";
     }
 
     public void Confirm(){
@@ -114,7 +114,7 @@ public class CharacterSelect : MonoBehaviour
     void Update()
     {
         if (Input.GetButtonDown("P"+(playerPosition+1).ToString()+"A"))
-        {
+        {            Debug.Log("P"+playerPosition.ToString()+"Triggered Confirm");
             Confirm();
             Debug.Log("P"+playerPosition.ToString()+"Triggered Confirm");
         }
