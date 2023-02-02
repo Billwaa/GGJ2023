@@ -2,6 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
+
+
+public enum readyStatus {
+    RETIRED,SELECTING,READY
+};
+
 public class CharacterSelect : MonoBehaviour
 {
 
@@ -11,12 +18,28 @@ public class CharacterSelect : MonoBehaviour
     public GameObject joinCanvas;
     public GameObject selectingCanvas;
     public GameObject readyCanvas;
+    public GameObject joinText;
     public GameObject retireText1;
     public GameObject retireText2;
-    private enum readyStatus {
-        RETIRED,SELECTING,READY
-    };
+
+    string[] confirmKeyMap = {"`","Right Shift","Keypad 3","G"};
+    string[] cancelKeyMap = {"Tab","Right Ctrl","Keypad .","B"};
+
+
     private readyStatus playerReadyStatus = readyStatus.RETIRED;
+
+    public int getCharacterSelected(){
+    return selectedCharacter;
+    }
+    public readyStatus getReadyStatus(){
+    return playerReadyStatus;
+    }
+
+    private void Start() {
+        joinText.GetComponent<TextMeshProUGUI>().text="Press "+confirmKeyMap[playerPosition]+" to Join";
+        retireText1.GetComponent<TextMeshProUGUI>().text="Press "+cancelKeyMap[playerPosition]+" to Retire";
+        retireText2.GetComponent<TextMeshProUGUI>().text="Press "+cancelKeyMap[playerPosition]+" to Retire";
+    }
 
     public void Confirm(){
         switch (playerReadyStatus)
