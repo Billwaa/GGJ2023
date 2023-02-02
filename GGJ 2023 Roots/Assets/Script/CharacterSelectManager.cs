@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 public class CharacterSelectManager : MonoBehaviour
 {
     public GameObject[] characterSelections;
@@ -54,7 +54,7 @@ public class CharacterSelectManager : MonoBehaviour
     void BeginGame(){
         errorText.SetActive(false);
         Debug.Log("開始遊戲");
-
+        SceneManager.LoadScene("Billy Test Scene",LoadSceneMode.Single);
     }
         
     void Update()
