@@ -14,7 +14,7 @@ public class SeedController : MonoBehaviour
     [SerializeField]
     PlayerManager playerManager;
 
-    List<PlayerController> playerController;
+    public List<PlayerController> playerController;
 
     Animator animator;
 
@@ -90,7 +90,7 @@ public class SeedController : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             PlayerController player = collision.gameObject.GetComponent<PlayerController>();
-            Debug.Log("collision");
+            //Debug.Log("collision");
             if (!player.isDead)
                 if (player.PlayerId != lastPlayerID)
                 {
@@ -101,9 +101,9 @@ public class SeedController : MonoBehaviour
                     player.seedController = this;
                     player.passCooldownTimer = 5; // 5 sec before pass
                     this.transform.parent = collision.transform;
-                    this.transform.localPosition = new Vector3(0, 3, 0);
+                    this.transform.localPosition = new Vector3(0, 3.5f, 0);
                     this.transform.rotation = Quaternion.Euler(-90, 0, 0);
-                    Debug.Log("hit");
+                    //Debug.Log("hit");
                 }
       
         }

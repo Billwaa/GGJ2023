@@ -13,11 +13,19 @@ public class PlayerController : MonoBehaviour
     public KeyCode RightKey;
     public KeyCode AttackKey;
     public KeyCode PassKey;
+    public KeyCode UpKey_BK;
+    public KeyCode DownKey_BK;
+    public KeyCode LeftKey_BK;
+    public KeyCode RightKey_BK;
+    public KeyCode AttackKey_BK;
+    public KeyCode PassKey_BK;
     public float Speed; // Original Speed
 
     // Attribute (Attack)
-    public Skill Skill;
+    public Skill skill;
     public float skillCooldownTimer;
+    public Image skillCooldown;
+
 
     // Attribute (Got Attack)
     public bool attacked;
@@ -33,7 +41,14 @@ public class PlayerController : MonoBehaviour
     public float passCooldownTimer;
     public Image passCooldown;
 
+    public float holdTimer = 0;
+    public float onionTimer = 0;
+
+    public List<PlayerController> playerList;
+
     private Animator animator;
+
+    public GameObject IvyEffect;
 
     void Start()
     {
@@ -46,12 +61,20 @@ public class PlayerController : MonoBehaviour
         isDead = false;
         
         animator = GetComponent<Animator>();
+
+        UpKey_BK = UpKey;
+        DownKey_BK = DownKey;
+        LeftKey_BK = LeftKey;
+        RightKey_BK = RightKey;
+        AttackKey_BK = AttackKey;
+        PassKey_BK = PassKey;
     }
 
     void Update()
     {
-        if (!isDead)
+        if (!isDead && holdTimer <= 0)
         {
+
             // Movement Code
             float x_input = 0;
             float y_input = 0;
@@ -79,6 +102,28 @@ public class PlayerController : MonoBehaviour
             else
                 animator.SetBool("isWalking", false);
 
+
+            if (skill.Projectile != null)
+                if (this.skillCooldownTimer > 0)
+                {
+                    this.skillCooldownTimer -= Time.deltaTime;
+                    this.skillCooldown.fillAmount = this.skillCooldownTimer / skill.SkillCooldown;
+                }
+                else
+                {
+                    this.skillCooldown.fillAmount = 0;
+
+                    if (Input.GetKey(AttackKey))
+                    {
+                        GameObject projectile = GameObject.Instantiate(skill.Projectile, this.transform.position + new Vector3(0, 1, 0), Quaternion.Euler(0, 0, 0));
+                        ProjectileController projectileController = projectile.GetComponent<ProjectileController>();
+                        projectileController.skill = this.skill;
+                        projectileController.playerList = this.playerList;
+                        projectileController.ownerId = this.PlayerId;
+                        this.skillCooldownTimer = skill.SkillCooldown;
+                    }
+                }
+
         }
 
 
@@ -98,6 +143,21 @@ public class PlayerController : MonoBehaviour
             passCooldown.enabled = false;
         }
 
+
+
+        holdTimer -= Time.deltaTime;
+        onionTimer -= Time.deltaTime;
+
+        if (holdTimer <= 0)
+            IvyEffect.SetActive(false);
+
+        if (onionTimer <= 0)
+        {
+            this.UpKey = this.UpKey_BK;
+            this.DownKey = this.DownKey_BK;
+            this.LeftKey = this.LeftKey_BK;
+            this.RightKey = this.RightKey_BK;   
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -107,5 +167,23 @@ public class PlayerController : MonoBehaviour
             isDead = true;
             animator.SetBool("isDead", true);
         }
+       
+    }
+
+    public void IvySkillEffect(float duration)
+    {
+        Debug.Log("Player " + PlayerId + ": IVY HIT");
+        IvyEffect.SetActive(true);
+        this.holdTimer = duration;
+    }
+
+    public void OnionSkillEffect(float duration)
+    {
+        Debug.Log("Player " + PlayerId + ": ONION HIT " + duration);
+        this.UpKey = this.DownKey_BK;
+        this.DownKey = this.UpKey_BK;
+        this.RightKey = this.LeftKey_BK;
+        this.LeftKey = this.RightKey_BK;
+        onionTimer = duration;
     }
 }
