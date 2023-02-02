@@ -42,7 +42,7 @@ public class PlayerManager : MonoBehaviour
 
         
         // Define Player Controls
-        PlayerControls[0] = new KeyCode[] { KeyCode.W, KeyCode.S, KeyCode.A, KeyCode.D, KeyCode.Tilde, KeyCode.Tab };
+        PlayerControls[0] = new KeyCode[] { KeyCode.W, KeyCode.S, KeyCode.A, KeyCode.D, KeyCode.BackQuote, KeyCode.Tab };
         PlayerControls[1] = new KeyCode[] { KeyCode.UpArrow, KeyCode.DownArrow, KeyCode.LeftArrow, KeyCode.RightArrow, KeyCode.RightShift, KeyCode.RightControl };
         PlayerControls[2] = new KeyCode[] { KeyCode.I, KeyCode.K, KeyCode.J, KeyCode.L, KeyCode.G, KeyCode.B };
         PlayerControls[3] = new KeyCode[] { KeyCode.Keypad8, KeyCode.Keypad5, KeyCode.Keypad4, KeyCode.Keypad6, KeyCode.Keypad3, KeyCode.KeypadPeriod };
@@ -75,9 +75,10 @@ public class PlayerManager : MonoBehaviour
             player.AttackKey = PlayerControls[i][4];
             player.PassKey = PlayerControls[i][5];
             player.Speed = 5.5f;
-            player.Skill = skillset.skillset[i];
+            player.skill = skillset.skillset[0];
 
             playerList.Add(player);
+            player.playerList = this.playerList;
         }
     }
 }
