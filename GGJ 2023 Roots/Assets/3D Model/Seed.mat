@@ -208,8 +208,8 @@ Material:
     - _STIL: 0
     - _Saturation: 1
     - _SelfLitHighContrast: 1
-    - _SelfLitIntensity: 0.156
-    - _SelfLitPower: 200
+    - _SelfLitIntensity: 0.061
+    - _SelfLitPower: 100
     - _SelfShadowAffectedByLightShadowStrength: 0
     - _SelfShadowHardness: 1
     - _SelfShadowRealTimeShadowColorPower: 1
