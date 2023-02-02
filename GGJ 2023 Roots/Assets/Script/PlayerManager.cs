@@ -25,14 +25,14 @@ public class PlayerManager : MonoBehaviour
 
 
         // Load character array from character selection scene
-        int[] playerCharacters = new int [] {-1,-1,-1,-1};
+        int[] selectedCharacter = new int [] {-1,-1,-1,-1};
         for (int i = 0; i < 4; i++){
             if (PlayerPrefs.GetString("P"+i.ToString()+"joinStatus")=="true"){
-                playerCharacters[i]=PlayerPrefs.GetInt("P"+i.ToString()+"selectedCharacter");
+                selectedCharacter[i]=PlayerPrefs.GetInt("P"+i.ToString()+"selectedCharacter");
             }
         }
         Debug.Log("已載入玩家列表: [" +string.Join(",",
-        new List<int>(playerCharacters)
+        new List<int>(selectedCharacter)
         .ConvertAll(i => i.ToString()))+"]");
 
 

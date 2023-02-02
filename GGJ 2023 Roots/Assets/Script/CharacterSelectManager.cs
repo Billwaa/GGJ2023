@@ -35,7 +35,8 @@ public class CharacterSelectManager : MonoBehaviour
             if (characterSelections[i].GetComponent<CharacterSelect>().getReadyStatus()==readyStatus.READY){
                 playerNumber +=1;
                 PlayerPrefs.SetString("P"+i.ToString()+"joinStatus","true");
-                PlayerPrefs.SetInt("P"+i.ToString()+"selectedCharacter",characterSelections[0].GetComponent<CharacterSelect>().getCharacterSelected());
+                PlayerPrefs.SetInt("P"+i.ToString()+"selectedCharacter",characterSelections[i].GetComponent<CharacterSelect>().getCharacterSelected());
+
             }
         }
 
