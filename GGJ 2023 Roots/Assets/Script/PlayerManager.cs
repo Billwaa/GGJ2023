@@ -55,7 +55,7 @@ public class PlayerManager : MonoBehaviour
             player.RightKey = PlayerControls[i][3];
             player.AttackKey = PlayerControls[i][4];
             player.PassKey = PlayerControls[i][5];
-            player.Speed = 5;
+            player.Speed = 5.5f;
             player.Skill = skillset.skillset[i];
 
             playerList.Add(player);

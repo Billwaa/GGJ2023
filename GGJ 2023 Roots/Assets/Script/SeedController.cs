@@ -101,7 +101,7 @@ public class SeedController : MonoBehaviour
                     player.seedController = this;
                     player.passCooldownTimer = 5; // 5 sec before pass
                     this.transform.parent = collision.transform;
-                    this.transform.localPosition = new Vector3(0, 3, 0);
+                    this.transform.localPosition = new Vector3(0, 3.5f, 0);
                     this.transform.rotation = Quaternion.Euler(-90, 0, 0);
                     Debug.Log("hit");
                 }
