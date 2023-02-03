@@ -70,6 +70,8 @@ public class PlayerManager : MonoBehaviour
     {
         //selectedCharacter = new int[] { 0, 1, 2, 3 };
 
+        int playerID = 0;
+
         for (int i = 0; i < num; i++)
         {
             Debug.Log(selectedCharacter[i]);
@@ -83,7 +85,7 @@ public class PlayerManager : MonoBehaviour
             PlayerController player = playerObj.GetComponent<PlayerController>();
             player.transform.position = PlayerSpawn[i].position;
             player.transform.rotation = PlayerSpawn[i].rotation;
-            player.PlayerId = i;
+            player.PlayerId = playerID;
             player.UpKey = PlayerControls[i][0];
             player.DownKey = PlayerControls[i][1];
             player.LeftKey = PlayerControls[i][2];
@@ -95,6 +97,7 @@ public class PlayerManager : MonoBehaviour
 
             playerList.Add(player);
             player.playerList = this.playerList;
+            playerID++;
         }
 
     }

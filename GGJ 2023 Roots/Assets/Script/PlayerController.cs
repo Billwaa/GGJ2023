@@ -151,7 +151,7 @@ public class PlayerController : MonoBehaviour
                             else if (this.skill.SkillID == 2)
                             {
                                 GameObject fartBomb = GameObject.Instantiate(FartBomb, this.transform.position + new Vector3(0, 0.5f, 0), Quaternion.Euler(0, 0, 0));
-                                FartBombController fartBombController = FartBomb.GetComponent<FartBombController>();
+                                FartBombController fartBombController = fartBomb.GetComponent<FartBombController>();
                                 fartBombController.effectTimer = this.skill.SkillEffectTime;
                                 fartBombController.ownerID = this.PlayerId;
                             }
