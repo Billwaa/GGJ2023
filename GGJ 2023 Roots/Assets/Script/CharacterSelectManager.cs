@@ -60,7 +60,7 @@ public class CharacterSelectManager : MonoBehaviour
     }
     IEnumerator LoadScene()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene("Billy Test Scene",LoadSceneMode.Single);
     }
 

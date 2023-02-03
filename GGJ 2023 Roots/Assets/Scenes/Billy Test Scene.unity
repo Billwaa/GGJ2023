@@ -7688,10 +7688,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4760620181616715502, guid: e58280db8c786e5498b8c2737a134c9b, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4760620181988740673, guid: e58280db8c786e5498b8c2737a134c9b, type: 3}
       propertyPath: m_Camera
       value: 
@@ -7700,10 +7696,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 396545276}
-    - target: {fileID: 4760620183142321304, guid: e58280db8c786e5498b8c2737a134c9b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7264102338008574707, guid: e58280db8c786e5498b8c2737a134c9b, type: 3}
       propertyPath: m_Name
       value: Fart Green
