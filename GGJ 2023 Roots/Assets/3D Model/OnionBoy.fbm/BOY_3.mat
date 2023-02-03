@@ -14,6 +14,7 @@ Material:
   - N_F_O_ON
   - N_F_RELGI_ON
   - N_F_RL_ON
+  - N_F_SON_ON
   - N_F_SS_ON
   m_InvalidKeywords:
   - L_F_RELGI_ON
@@ -206,7 +207,7 @@ Material:
     - _N_F_RL: 1
     - _N_F_SCT: 0
     - _N_F_SL: 0
-    - _N_F_SON: 0
+    - _N_F_SON: 1
     - _N_F_SS: 1
     - _N_F_ST: 0
     - _N_F_STIAL: 0
@@ -219,7 +220,7 @@ Material:
     - _OutlineExtrudeMethod: 0
     - _OutlineWidth: 0.002
     - _OutlineWidthAffectedByViewDistance: 0
-    - _OutlineZPostionInCamera: 0
+    - _OutlineZPostionInCamera: 1.4
     - _OverallShadowColorPower: 1
     - _PSGLOTEX: 0
     - _PTexturePower: 1
@@ -263,7 +264,7 @@ Material:
     - _ShowInAmbientLightShadowIntensity: 1
     - _ShowInAmbientLightShadowThreshold: 0.4
     - _ShowNormal: 0
-    - _SmoothObjectNormal: 0
+    - _SmoothObjectNormal: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -276,7 +277,7 @@ Material:
     - _VertexColorBlueAffectOutlineWitdh: 0
     - _VertexColorGreenControlSelfShadowThreshold: 0
     - _VertexColorRedControlSmoothObjectNormal: 0
-    - _XYZHardness: 14
+    - _XYZHardness: 79
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
@@ -285,7 +286,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GlossColor: {r: 1, g: 1, b: 1, a: 1}
     - _HighlightColor: {r: 1, g: 1, b: 1, a: 1}
-    - _MainColor: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 1}
+    - _MainColor: {r: 0.66, g: 0.60764, b: 0.5676, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineOffset: {r: 0, g: 0, b: 0, a: 1}
     - _OverallShadowColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
@@ -294,5 +295,5 @@ Material:
     - _SelfShadowColor: {r: 1, g: 1, b: 1, a: 1}
     - _SelfShadowRealTimeShadowColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShadowTColor: {r: 1, g: 1, b: 1, a: 1}
-    - _XYZPosition: {r: 0, g: 0, b: 0, a: 0}
+    - _XYZPosition: {r: 0.1, g: -36.9, b: 0, a: 0}
   m_BuildTextureStacks: []
