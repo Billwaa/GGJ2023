@@ -22,8 +22,8 @@ public class Skillset : MonoBehaviour
         skillset[0].SkillName = "Ivy";
         skillset[0].SkillDescription = "Stun the target";
 
-        skillset[0].SkillCooldown = 5;
-        skillset[0].SkillEffectTime = 1.5f;
+        skillset[0].SkillCooldown = 7;
+        skillset[0].SkillEffectTime = 2f;
 
         skillset[0].SkillShootSpeed = 20;
         skillset[0].SkillAutoAimTime = 5;
@@ -37,15 +37,15 @@ public class Skillset : MonoBehaviour
         skillset[1].SkillName = "Onion";
         skillset[1].SkillDescription = "Cry the target & randonly mixed control";
 
-        skillset[1].SkillCooldown = 4;
-        skillset[1].SkillEffectTime = 5f;
+        skillset[1].SkillCooldown = 6;
+        skillset[1].SkillEffectTime = 3f;
 
         skillset[1].SkillShootSpeed = 20;
         skillset[1].SkillAutoAimTime = 5;
         skillset[1].SkillAutoAimActive = true;
         skillset[1].SkillEmoji = skillEmoji[1];
         skillset[1].Projectile = OnionProjectile;
-        skillset[1].ProjectileFlightTime = 3;
+        skillset[1].ProjectileFlightTime = 2;
 
 
         //Skill 2
@@ -69,7 +69,7 @@ public class Skillset : MonoBehaviour
         skillset[3].SkillDescription = "Speed buff myself";
 
         skillset[3].SkillCooldown = 5;
-        skillset[3].SkillEffectTime = 3;
+        skillset[3].SkillEffectTime = 2;
 
         skillset[3].SkillShootSpeed = 20;
         skillset[3].SkillAutoAimTime = 0;

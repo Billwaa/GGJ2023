@@ -233,7 +233,7 @@ public class PlayerController : MonoBehaviour
             if (other.gameObject.GetComponent<FartBombController>().ownerID != this.PlayerId)
             {
                 FartEffect.SetActive(true);
-                this.speed = 0.5f * Speed;
+                this.speed = 0.2f * Speed;
                 fartedObj = other.gameObject;
             }
         }
