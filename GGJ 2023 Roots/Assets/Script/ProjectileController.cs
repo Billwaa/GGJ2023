@@ -13,6 +13,9 @@ public class ProjectileController : MonoBehaviour
 
     private NavMeshAgent agent;
 
+    public GameObject explosionObj;
+    public GameObject meshObj;
+
     void Start()
     {
         destroyTimer = skill.ProjectileFlightTime;
@@ -25,12 +28,23 @@ public class ProjectileController : MonoBehaviour
         destroyTimer -= Time.deltaTime;
         
         if (destroyTimer < 0)
-            Destroy(this.gameObject);
+        {
+            explosionObj.SetActive(true);
+            meshObj.SetActive(false);
+            checkDestroyEvent();
+            agent.speed = 0;
 
-        int minID = this.findClosestPlayer();
+        }
+        else
+        {
 
-        if (minID > -1)
-            agent.SetDestination(playerList[minID].transform.position);
+            int minID = this.findClosestPlayer();
+
+            if (minID > -1)
+                agent.SetDestination(playerList[minID].transform.position);
+        }
+
+
 
 
     }
@@ -68,7 +82,7 @@ public class ProjectileController : MonoBehaviour
 
             PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
             
-            if (playerController.PlayerId == this.ownerId)
+            if (playerController.PlayerId == this.ownerId || playerController.isDead)
                 return;
 
             //Debug.Log("HIT3");
@@ -78,8 +92,16 @@ public class ProjectileController : MonoBehaviour
             else if (this.skill.SkillID == 1)
                 playerController.OnionSkillEffect(skill.SkillDuration);
 
-            Destroy(this.gameObject);
+            explosionObj.SetActive(true);
+            meshObj.SetActive(false);
         }
+    }
+
+    private void checkDestroyEvent()
+    {
+        if (explosionObj.activeSelf && !explosionObj.GetComponent<ParticleSystem>().isPlaying )
+            Destroy(this.gameObject);
+
     }
 
 }
