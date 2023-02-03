@@ -68,6 +68,11 @@ public class ProjectileController : MonoBehaviour
             }
         }
 
+        if (minID == -1)
+        {
+            Debug.Log("ERROR: Can't Find Cloest Player");
+        }
+
         return minID;
 
     }

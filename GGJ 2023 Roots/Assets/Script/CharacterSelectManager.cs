@@ -61,7 +61,7 @@ public class CharacterSelectManager : MonoBehaviour
     IEnumerator LoadScene()
     {
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene("Billy Test Scene",LoadSceneMode.Single);
+        SceneManager.LoadScene("Billy Game Scene",LoadSceneMode.Single);
     }
 
         
