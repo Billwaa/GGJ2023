@@ -20,6 +20,7 @@ public class PlayerManager : MonoBehaviour
     public List<PlayerController> playerList = new List<PlayerController>();
 
 
+
     void Start()
     {   
 

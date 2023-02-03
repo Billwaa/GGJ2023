@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465767, g: 0.49641144, b: 0.57481605, a: 1}
+  m_IndirectSpecularColor: {r: 0.4461763, g: 0.49595284, b: 0.5745663, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3846,7 +3846,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 152032387}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -95.4, y: 1.7861702, z: -85.8}
+  m_LocalPosition: {x: -107.4, y: 1.7861702, z: -85.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19327,7 +19327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPlayer: 4
-  PlayerPrefab: {fileID: 2800773066203440550, guid: 05ecc36ad6266444b932e559613d415e, type: 3}
+  PlayerPrefab: {fileID: 4096393104415223464, guid: 744fab224f235864e8377124539ab312, type: 3}
   PlayerSpawn:
   - {fileID: 729508010}
   - {fileID: 1660196569}
@@ -44528,7 +44528,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1425057797}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.029360095, y: 0.028292872, z: 0.056624915}
@@ -44843,7 +44843,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.9609096, b: 0.8714846, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -44900,14 +44900,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1439341996}
-  m_LocalRotation: {x: 0.007914191, y: -0.90614885, z: 0.42254427, w: 0.016971517}
+  m_LocalRotation: {x: 0.016891407, y: -0.43161923, z: 0.90186155, w: 0.008083764}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 22
-  m_LocalEulerAnglesHint: {x: 50, y: -177.854, z: 0}
+  m_LocalEulerAnglesHint: {x: 128.85, y: -177.854, z: 0}
 --- !u!1001 &1440102290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51958,7 +51958,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1603796651844153326, guid: d464c45430f20ba4eb606f1f59e24710, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2092489521606292820, guid: d464c45430f20ba4eb606f1f59e24710, type: 3}
       propertyPath: m_RootOrder
