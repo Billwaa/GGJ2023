@@ -85,22 +85,22 @@ public class SeedController : MonoBehaviour
         locked = false;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
-            PlayerController player = collision.gameObject.GetComponent<PlayerController>();
+            PlayerController player = other.gameObject.GetComponent<PlayerController>();
             //Debug.Log("collision");
             if (!player.isDead)
                 if (player.PlayerId != lastPlayerID)
                 {
                     agent.enabled = false;
                     locked = true;
-                    lastPlayerID = collision.transform.GetComponent<PlayerController>().PlayerId;
+                    lastPlayerID = other.transform.GetComponent<PlayerController>().PlayerId;
                     player.hasSeed = true;
                     player.seedController = this;
-                    player.passCooldownTimer = 5; // 5 sec before pass
-                    this.transform.parent = collision.transform;
+                    player.passCooldownTimer = 4; // 5 sec before pass
+                    this.transform.parent = other.transform;
                     this.transform.localPosition = new Vector3(0, 3.5f, 0);
                     this.transform.rotation = Quaternion.Euler(-90, 0, 0);
                     //Debug.Log("hit");

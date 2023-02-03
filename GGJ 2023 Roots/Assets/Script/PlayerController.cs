@@ -61,6 +61,8 @@ public class PlayerController : MonoBehaviour
     public GameObject FartBomb;
     public GameObject fartedObj = null;
 
+    // Rigidbody
+    public Rigidbody rb;
     void Start()
     {
         skillCooldownTimer = 0;
@@ -72,6 +74,7 @@ public class PlayerController : MonoBehaviour
         isDead = false;
         
         animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
 
         UpKey_BK = UpKey;
         DownKey_BK = DownKey;
@@ -238,7 +241,7 @@ public class PlayerController : MonoBehaviour
             if (other.gameObject.GetComponent<FartBombController>().ownerID != this.PlayerId)
             {
                 FartEffect.SetActive(true);
-                this.speed = 0.2f * Speed;
+                this.speed = 0.4f * Speed;
                 fartedObj = other.gameObject;
             }
         }
@@ -261,6 +264,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Player " + PlayerId + ": IVY HIT");
         IvyEffect.SetActive(true);
         this.holdTimer = duration;
+        rb.velocity = new Vector3(0, 0, 0);
     }
 
     public void OnionSkillEffect(float duration)

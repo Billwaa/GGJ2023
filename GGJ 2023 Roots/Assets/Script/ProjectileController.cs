@@ -72,15 +72,15 @@ public class ProjectileController : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
         //Debug.Log("HIT1");
 
-        if (collision.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             //Debug.Log("HIT2");
 
-            PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
+            PlayerController playerController = other.gameObject.GetComponent<PlayerController>();
             
             if (playerController.PlayerId == this.ownerId || playerController.isDead)
                 return;
