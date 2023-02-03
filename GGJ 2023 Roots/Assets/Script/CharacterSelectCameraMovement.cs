@@ -35,7 +35,6 @@ public class CharacterSelectCameraMovement : MonoBehaviour
     private void OnGUI() {
         if (start){
         GUI.color = colorLerp;
-        Debug.Log(GUI.color);
         GUI.DrawTexture(new Rect(0,0,Screen.width,Screen.height),whtTexture);
         }
     }

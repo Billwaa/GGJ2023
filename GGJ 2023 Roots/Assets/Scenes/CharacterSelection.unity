@@ -6034,9 +6034,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characters:
   - {fileID: 820726605}
+  - {fileID: 1550246538}
   - {fileID: 1641360977}
   - {fileID: 1740588699}
-  - {fileID: 1550246538}
   selectedCharacter: 0
   playerPosition: 0
   joinCanvas: {fileID: 1186823321}
@@ -9180,9 +9180,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characters:
   - {fileID: 123350579}
+  - {fileID: 1653398124}
   - {fileID: 182464563}
   - {fileID: 1446767254}
-  - {fileID: 1653398124}
   selectedCharacter: 0
   playerPosition: 1
   joinCanvas: {fileID: 705821829}
@@ -21023,9 +21023,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characters:
   - {fileID: 829338107}
+  - {fileID: 229716458}
   - {fileID: 1458438605}
   - {fileID: 410747763}
-  - {fileID: 229716458}
   selectedCharacter: 0
   playerPosition: 3
   joinCanvas: {fileID: 1778247230}
@@ -24108,9 +24108,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characters:
   - {fileID: 23834049}
+  - {fileID: 1712774105}
   - {fileID: 958904355}
   - {fileID: 1784103152}
-  - {fileID: 1712774105}
   selectedCharacter: 0
   playerPosition: 2
   joinCanvas: {fileID: 1269364602}
