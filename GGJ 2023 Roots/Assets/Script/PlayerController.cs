@@ -43,12 +43,14 @@ public class PlayerController : MonoBehaviour
 
     public float holdTimer = 0;
     public float onionTimer = 0;
+    public float chilliTimer = 0;
 
     public List<PlayerController> playerList;
 
     private Animator animator;
 
     public GameObject IvyEffect;
+    public GameObject ChilliEffect;
 
     void Start()
     {
@@ -103,7 +105,6 @@ public class PlayerController : MonoBehaviour
                 animator.SetBool("isWalking", false);
 
 
-            if (skill.Projectile != null)
                 if (this.skillCooldownTimer > 0)
                 {
                     this.skillCooldownTimer -= Time.deltaTime;
@@ -115,14 +116,31 @@ public class PlayerController : MonoBehaviour
 
                     if (Input.GetKey(AttackKey))
                     {
-                        GameObject projectile = GameObject.Instantiate(skill.Projectile, this.transform.position + new Vector3(0, 1, 0), Quaternion.Euler(0, 0, 0));
-                        ProjectileController projectileController = projectile.GetComponent<ProjectileController>();
-                        projectileController.skill = this.skill;
-                        projectileController.playerList = this.playerList;
-                        projectileController.ownerId = this.PlayerId;
+                        if (skill.Projectile != null)
+                        {
+                            GameObject projectile = GameObject.Instantiate(skill.Projectile, this.transform.position + new Vector3(0, 1, 0), Quaternion.Euler(0, 0, 0));
+                            ProjectileController projectileController = projectile.GetComponent<ProjectileController>();
+                            projectileController.skill = this.skill;
+                            projectileController.playerList = this.playerList;
+                            projectileController.ownerId = this.PlayerId;
+                            this.skillCooldownTimer = skill.SkillCooldown;
+                        }
+                        else  // buff
+                        {
+                            if (this.skill.SkillID == 2)
+                            {
+                                this.ChilliSkillEffect(skill.SkillEffectTime);
+                                this.ChilliEffect.SetActive(true);
+                            }
+
                         this.skillCooldownTimer = skill.SkillCooldown;
+
+                        }
+
                     }
                 }
+
+
 
         }
 
@@ -147,6 +165,7 @@ public class PlayerController : MonoBehaviour
 
         holdTimer -= Time.deltaTime;
         onionTimer -= Time.deltaTime;
+        chilliTimer -= Time.deltaTime;
 
         if (holdTimer <= 0)
             IvyEffect.SetActive(false);
@@ -157,6 +176,12 @@ public class PlayerController : MonoBehaviour
             this.DownKey = this.DownKey_BK;
             this.LeftKey = this.LeftKey_BK;
             this.RightKey = this.RightKey_BK;   
+        }
+
+        if (speed != Speed && chilliTimer <= 0)
+        {
+            speed = Speed;
+            this.ChilliEffect.SetActive(false);
         }
     }
 
@@ -185,5 +210,11 @@ public class PlayerController : MonoBehaviour
         this.RightKey = this.LeftKey_BK;
         this.LeftKey = this.RightKey_BK;
         onionTimer = duration;
+    }
+
+    public void ChilliSkillEffect(float duration)
+    {
+        this.speed = 2 * Speed;
+        chilliTimer = duration;
     }
 }

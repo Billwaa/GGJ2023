@@ -23,7 +23,7 @@ public class Skillset : MonoBehaviour
         skillset[0].SkillDescription = "Stun the target";
 
         skillset[0].SkillCooldown = 5;
-        skillset[0].SkillEffectTime = 1;
+        skillset[0].SkillEffectTime = 1.5f;
 
         skillset[0].SkillShootSpeed = 20;
         skillset[0].SkillAutoAimTime = 5;
@@ -39,7 +39,7 @@ public class Skillset : MonoBehaviour
         skillset[1].SkillDescription = "Cry the target & randonly mixed control";
 
         skillset[1].SkillCooldown = 4;
-        skillset[1].SkillEffectTime = 2;
+        skillset[1].SkillEffectTime = 5f;
 
         skillset[1].SkillShootSpeed = 20;
         skillset[1].SkillAutoAimTime = 5;
@@ -63,6 +63,7 @@ public class Skillset : MonoBehaviour
         skillset[2].SkillAutoAimActive = true;
         skillset[2].SkillEmoji = skillEmoji[2];
         skillset[2].Projectile = null;
+
 
         //Skill 3
         skillset[3].SkillID = 3;

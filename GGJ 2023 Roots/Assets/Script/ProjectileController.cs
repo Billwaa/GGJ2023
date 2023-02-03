@@ -88,9 +88,9 @@ public class ProjectileController : MonoBehaviour
             //Debug.Log("HIT3");
 
             if (this.skill.SkillID == 0)
-                playerController.IvySkillEffect(skill.SkillDuration);
+                playerController.IvySkillEffect(skill.SkillEffectTime);
             else if (this.skill.SkillID == 1)
-                playerController.OnionSkillEffect(skill.SkillDuration);
+                playerController.OnionSkillEffect(skill.SkillEffectTime);
 
             explosionObj.SetActive(true);
             meshObj.SetActive(false);
