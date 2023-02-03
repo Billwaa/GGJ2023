@@ -83,35 +83,38 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (!isDead && holdTimer <= 0)
+        if (!isDead)
         {
-
-            // Movement Code
-            float x_input = 0;
-            float y_input = 0;
-
-            if (Input.GetKey(UpKey))
-                y_input += 1;
-            if (Input.GetKey(DownKey))
-                y_input += -1;
-            if (Input.GetKey(LeftKey))
-                x_input += -1;
-            if (Input.GetKey(RightKey))
-                x_input += 1;
-
             if (hasSeed && passCooldownTimer < 0 && Input.GetKey(PassKey))
                 seedController.nextTarget();
 
-            Vector3 direction = new Vector3(x_input, 0, y_input).normalized;
-            this.transform.position += direction * speed * Time.deltaTime;
+            if (holdTimer <= 0)
+            {
+                // Movement Code
+                float x_input = 0;
+                float y_input = 0;
 
-            float angle = Mathf.Atan2(-direction.x, -direction.z) * 180.0f / Mathf.PI + 180;
-            this.transform.rotation = Quaternion.Euler(0, angle, 0);
+                if (Input.GetKey(UpKey))
+                    y_input += 1;
+                if (Input.GetKey(DownKey))
+                    y_input += -1;
+                if (Input.GetKey(LeftKey))
+                    x_input += -1;
+                if (Input.GetKey(RightKey))
+                    x_input += 1;
 
-            if (direction.magnitude > 0)
-                animator.SetBool("isWalking", true);
-            else
-                animator.SetBool("isWalking", false);
+
+
+                Vector3 direction = new Vector3(x_input, 0, y_input).normalized;
+                this.transform.position += direction * speed * Time.deltaTime;
+
+                float angle = Mathf.Atan2(-direction.x, -direction.z) * 180.0f / Mathf.PI + 180;
+                this.transform.rotation = Quaternion.Euler(0, angle, 0);
+
+                if (direction.magnitude > 0)
+                    animator.SetBool("isWalking", true);
+                else
+                    animator.SetBool("isWalking", false);
 
 
                 if (this.skillCooldownTimer > 0)
@@ -143,19 +146,21 @@ public class PlayerController : MonoBehaviour
                             }
 
                             else if (this.skill.SkillID == 2)
-                        {
-                            GameObject fartBomb = GameObject.Instantiate(FartBomb, this.transform.position + new Vector3(0, 0.5f, 0), Quaternion.Euler(0, 0, 0));
-                            FartBombController fartBombController = FartBomb.GetComponent<FartBombController>();
-                            fartBombController.effectTimer = this.skill.SkillEffectTime;
-                            fartBombController.ownerID = this.PlayerId;
-                        }
+                            {
+                                GameObject fartBomb = GameObject.Instantiate(FartBomb, this.transform.position + new Vector3(0, 0.5f, 0), Quaternion.Euler(0, 0, 0));
+                                FartBombController fartBombController = FartBomb.GetComponent<FartBombController>();
+                                fartBombController.effectTimer = this.skill.SkillEffectTime;
+                                fartBombController.ownerID = this.PlayerId;
+                            }
 
-                        this.skillCooldownTimer = skill.SkillCooldown;
+                            this.skillCooldownTimer = skill.SkillCooldown;
 
                         }
 
                     }
                 }
+            }
+           
 
 
 
