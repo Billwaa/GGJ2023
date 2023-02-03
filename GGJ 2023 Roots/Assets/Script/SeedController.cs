@@ -69,7 +69,7 @@ public class SeedController : MonoBehaviour
             if (minID > -1)
                 agent.SetDestination(playerController[minID].transform.position);
             else
-                agent.SetDestination(new Vector3(0, 2, 0));
+                agent.SetDestination(new Vector3(0, 2, -17));
         }
         else
         {

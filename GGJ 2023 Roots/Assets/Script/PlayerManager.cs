@@ -71,6 +71,7 @@ public class PlayerManager : MonoBehaviour
         //selectedCharacter = new int[] { 0, 1, 2, 3 };
 
         int playerID = 0;
+        string[] name = new string[] {"Red", "Yellow", "Green", "Black"};
 
         for (int i = 0; i < num; i++)
         {
@@ -86,6 +87,7 @@ public class PlayerManager : MonoBehaviour
             player.transform.position = PlayerSpawn[i].position;
             player.transform.rotation = PlayerSpawn[i].rotation;
             player.PlayerId = playerID;
+            player.PlayerName = name[i];
             player.UpKey = PlayerControls[i][0];
             player.DownKey = PlayerControls[i][1];
             player.LeftKey = PlayerControls[i][2];

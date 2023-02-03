@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     // Attribute (Player)
     public int PlayerId;
+    public string PlayerName;
     public KeyCode UpKey;
     public KeyCode DownKey;
     public KeyCode LeftKey;
