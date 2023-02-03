@@ -30,11 +30,11 @@ public class SeedController : MonoBehaviour
 
         playerController = playerManager.playerList;
 
-        for (int i = 0; i < playerController.Count; i++)
-        {
-            Debug.Log(playerController[i].PlayerId);
-        }
-        Debug.Log("~~~~~~");
+        //for (int i = 0; i < playerController.Count; i++)
+        //{
+        //    Debug.Log(playerController[i].PlayerId);
+        //}
+        //Debug.Log("~~~~~~");
 
         if (!locked)
         {
@@ -62,7 +62,7 @@ public class SeedController : MonoBehaviour
                 if (mag < minDist)
                 {
                     minDist = mag;
-                    minID = i;
+                    minID = playerController[i].PlayerId;
                 }
             }
 

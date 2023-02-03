@@ -64,13 +64,17 @@ public class ProjectileController : MonoBehaviour
             if (dist < minDist)
             {
                 minDist = dist;
-                minID = i;
+                minID = playerList[i].PlayerId; 
             }
         }
 
         if (minID == -1)
         {
             Debug.Log("ERROR: Can't Find Cloest Player");
+        }
+        else
+        {
+            Debug.Log("Cloest: " + minID);
         }
 
         return minID;

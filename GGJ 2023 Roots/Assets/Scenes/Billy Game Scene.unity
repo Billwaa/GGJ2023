@@ -13297,7 +13297,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cba8cd7d9a698d1479f64d4bd0ec4431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   playerManager: {fileID: 629268898}
   playerController: []
 --- !u!65 &546410321
@@ -27826,11 +27825,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c03187fd2df8fe488a98c0b420a4d1b, type: 3}
---- !u!4 &958732960 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3284682063872655132, guid: 05ecc36ad6266444b932e559613d415e, type: 3}
-  m_PrefabInstance: {fileID: 427899912}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &959425100
 GameObject:
   m_ObjectHideFlags: 0
@@ -44582,7 +44576,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cba8cd7d9a698d1479f64d4bd0ec4431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 958732960}
   playerManager: {fileID: 629268898}
   playerController: []
 --- !u!4 &1425057800 stripped
@@ -67028,10 +67021,6 @@ PrefabInstance:
     - target: {fileID: 2408709797111659879, guid: 349fc41f6f036694da3e073dccfd8194, type: 3}
       propertyPath: m_Name
       value: FartBomb
-      objectReference: {fileID: 0}
-    - target: {fileID: 2408709797111659879, guid: 349fc41f6f036694da3e073dccfd8194, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 349fc41f6f036694da3e073dccfd8194, type: 3}
