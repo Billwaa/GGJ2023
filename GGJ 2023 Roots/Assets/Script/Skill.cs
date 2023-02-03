@@ -17,5 +17,4 @@ public class Skill
 
     public GameObject Projectile = null;
     public float ProjectileFlightTime = 2;
-    public float SkillDuration = 1;
 }

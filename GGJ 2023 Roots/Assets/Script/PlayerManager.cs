@@ -60,6 +60,8 @@ public class PlayerManager : MonoBehaviour
 
     public void initializePlayers(int num)
     {
+        int[] selectedSkill = new int[] { 0, 1, 2, 3 };
+
         for (int i = 0; i < num; i++)
         {
             // Player Initialization
@@ -75,7 +77,7 @@ public class PlayerManager : MonoBehaviour
             player.AttackKey = PlayerControls[i][4];
             player.PassKey = PlayerControls[i][5];
             player.Speed = 5.5f;
-            player.skill = skillset.skillset[2];
+            player.skill = skillset.skillset[selectedSkill[i]];
 
             playerList.Add(player);
             player.playerList = this.playerList;

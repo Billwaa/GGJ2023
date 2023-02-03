@@ -41,16 +41,25 @@ public class PlayerController : MonoBehaviour
     public float passCooldownTimer;
     public Image passCooldown;
 
+    // Timer
     public float holdTimer = 0;
     public float onionTimer = 0;
     public float chilliTimer = 0;
+    public float fartTier = 0;
 
     public List<PlayerController> playerList;
 
     private Animator animator;
 
+    // Skill Affected
     public GameObject IvyEffect;
     public GameObject ChilliEffect;
+    public GameObject OnionEffect;
+    public GameObject FartEffect;
+
+    // Prefab
+    public GameObject FartBomb;
+    public GameObject fartedObj = null;
 
     void Start()
     {
@@ -127,11 +136,19 @@ public class PlayerController : MonoBehaviour
                         }
                         else  // buff
                         {
-                            if (this.skill.SkillID == 2)
+                            if (this.skill.SkillID == 3)
                             {
                                 this.ChilliSkillEffect(skill.SkillEffectTime);
                                 this.ChilliEffect.SetActive(true);
                             }
+
+                            else if (this.skill.SkillID == 2)
+                        {
+                            GameObject fartBomb = GameObject.Instantiate(FartBomb, this.transform.position + new Vector3(0, 0.5f, 0), Quaternion.Euler(0, 0, 0));
+                            FartBombController fartBombController = FartBomb.GetComponent<FartBombController>();
+                            fartBombController.effectTimer = this.skill.SkillEffectTime;
+                            fartBombController.ownerID = this.PlayerId;
+                        }
 
                         this.skillCooldownTimer = skill.SkillCooldown;
 
@@ -176,13 +193,25 @@ public class PlayerController : MonoBehaviour
             this.DownKey = this.DownKey_BK;
             this.LeftKey = this.LeftKey_BK;
             this.RightKey = this.RightKey_BK;   
+            OnionEffect.SetActive(false);
         }
 
         if (speed != Speed && chilliTimer <= 0)
         {
-            speed = Speed;
+            if (!FartEffect.activeSelf || !fartedObj)
+            {
+                speed = Speed;
+                FartEffect.SetActive(false);
+            }
             this.ChilliEffect.SetActive(false);
         }
+
+        // Check if farted object is still around, if not reset speed
+        //if (!fartedObj)
+        //{
+        //    fartedObj = null;
+        //    speed = Speed;
+        //}
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -192,7 +221,34 @@ public class PlayerController : MonoBehaviour
             isDead = true;
             animator.SetBool("isDead", true);
         }
+
+        
        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Fart")
+        {
+            if (other.gameObject.GetComponent<FartBombController>().ownerID != this.PlayerId)
+            {
+                FartEffect.SetActive(true);
+                this.speed = 0.5f * Speed;
+                fartedObj = other.gameObject;
+            }
+        }
+    }
+
+
+    
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Fart")
+        {
+            this.speed = Speed;
+            FartEffect?.SetActive(false);
+        }
     }
 
     public void IvySkillEffect(float duration)
@@ -210,6 +266,7 @@ public class PlayerController : MonoBehaviour
         this.RightKey = this.LeftKey_BK;
         this.LeftKey = this.RightKey_BK;
         onionTimer = duration;
+        OnionEffect.SetActive(true);
     }
 
     public void ChilliSkillEffect(float duration)

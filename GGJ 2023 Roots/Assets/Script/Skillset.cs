@@ -31,7 +31,6 @@ public class Skillset : MonoBehaviour
         skillset[0].SkillEmoji = skillEmoji[0];
         skillset[0].Projectile = IvyProjectile;
         skillset[0].ProjectileFlightTime = 2;
-        skillset[0].SkillDuration = 1.5f;
 
         //Skill 1
         skillset[1].SkillID = 1;
@@ -47,7 +46,6 @@ public class Skillset : MonoBehaviour
         skillset[1].SkillEmoji = skillEmoji[1];
         skillset[1].Projectile = OnionProjectile;
         skillset[1].ProjectileFlightTime = 3;
-        skillset[1].SkillDuration = 5f;
 
 
         //Skill 2

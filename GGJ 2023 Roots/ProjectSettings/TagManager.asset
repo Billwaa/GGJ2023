@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Monster
   - Skill
+  - Missile
+  - Fart
   layers:
   - Default
   - TransparentFX
