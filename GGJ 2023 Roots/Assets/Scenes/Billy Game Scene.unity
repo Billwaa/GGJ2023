@@ -14859,6 +14859,8 @@ MonoBehaviour:
   countdown2: {fileID: 8300000, guid: 99213dea0b69d1042acba6bac0d2798f, type: 3}
   victoryClip: {fileID: 8300000, guid: 43299814ef6c978498eaf6f5108699f9, type: 3}
   victoryAudioObj: {fileID: 1858852507}
+  victoryCanvas: {fileID: 260153906}
+  mainCam: {fileID: 120752040}
   gameOver: 0
 --- !u!4 &605984548
 Transform:
