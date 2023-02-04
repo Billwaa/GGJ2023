@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Billy Test Scene.unity
     guid: 79f49cb16b08c504b8190e387efcab76
+  - enabled: 1
+    path: Assets/Scenes/Billy Game Scene.unity
+    guid: ecbf84030d5952f4c87217068e765930
   m_configObjects: {}

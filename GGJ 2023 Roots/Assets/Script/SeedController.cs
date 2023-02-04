@@ -9,9 +9,6 @@ public class SeedController : MonoBehaviour
     UnityEngine.AI.NavMeshAgent agent;
 
     [SerializeField]
-    Transform target;
-
-    [SerializeField]
     PlayerManager playerManager;
 
     public List<PlayerController> playerController;
@@ -32,6 +29,12 @@ public class SeedController : MonoBehaviour
     {
 
         playerController = playerManager.playerList;
+
+        //for (int i = 0; i < playerController.Count; i++)
+        //{
+        //    Debug.Log(playerController[i].PlayerId);
+        //}
+        //Debug.Log("~~~~~~");
 
         if (!locked)
         {
@@ -59,14 +62,14 @@ public class SeedController : MonoBehaviour
                 if (mag < minDist)
                 {
                     minDist = mag;
-                    minID = i;
+                    minID = playerController[i].PlayerId;
                 }
             }
 
             if (minID > -1)
                 agent.SetDestination(playerController[minID].transform.position);
             else
-                agent.SetDestination(new Vector3(0, 2, 0));
+                agent.SetDestination(new Vector3(0, 2, -17));
         }
         else
         {

@@ -60,8 +60,8 @@ public class CharacterSelectManager : MonoBehaviour
     }
     IEnumerator LoadScene()
     {
-        yield return new WaitForSeconds(2);
-        SceneManager.LoadScene("Billy Test Scene",LoadSceneMode.Single);
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene("Billy Game Scene",LoadSceneMode.Single);
     }
 
         

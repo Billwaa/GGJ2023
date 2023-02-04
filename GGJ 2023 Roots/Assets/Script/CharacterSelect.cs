@@ -22,8 +22,8 @@ public class CharacterSelect : MonoBehaviour
     public GameObject retireText1;
     public GameObject retireText2;
 
-    string[] confirmKeyMap = {"<sprite=0>","<sprite=2>","<sprite=4>","<sprite=7>"};
-    string[] cancelKeyMap = {"<sprite=1>","<sprite=3>","<sprite=6>","<sprite=8>"};
+    string[] confirmKeyMap = {"<sprite=0>","<sprite=2>","<sprite=5>","<sprite=9>"};
+    string[] cancelKeyMap = {"<sprite=1>","<sprite=4>","<sprite=8>","<sprite=10>"};
 
 
     private readyStatus playerReadyStatus = readyStatus.RETIRED;
