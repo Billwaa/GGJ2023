@@ -14179,6 +14179,7 @@ MonoBehaviour:
   backgroundTack: {fileID: 8300000, guid: 7b9e2ef6aa01c4e4e890521e0193783a, type: 3}
   countdown1: {fileID: 8300000, guid: 1dfa78545b52f5746ba474e6c6cd3203, type: 3}
   countdown2: {fileID: 8300000, guid: 99213dea0b69d1042acba6bac0d2798f, type: 3}
+  victoryClip: {fileID: 8300000, guid: 43299814ef6c978498eaf6f5108699f9, type: 3}
 --- !u!4 &605984548
 Transform:
   m_ObjectHideFlags: 0

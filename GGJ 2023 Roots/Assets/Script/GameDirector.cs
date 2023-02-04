@@ -13,6 +13,8 @@ public class GameDirector : MonoBehaviour
     public AudioClip backgroundTack;
     public AudioClip countdown1;
     public AudioClip countdown2;
+    public AudioClip victoryClip;
+    public GameObject victoryAudioObj;
 
     private AudioSource audioSource;
 
@@ -27,6 +29,9 @@ public class GameDirector : MonoBehaviour
     private float messageTimer = 0;
 
     private int lastAudioPlayTime = 10;
+
+    public bool gameOver = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -169,22 +174,36 @@ public class GameDirector : MonoBehaviour
                     targetSpeed = 5.2f;
                     break;
                 case 1:
-                    targetSpeed = 5.3f;
+                    targetSpeed = 0f;
+                    if (!gameOver)
+                    {
+                        gameOver = true;
+                        text.text = "Victory!!!";
+
+                        AudioSource victoryAudio = victoryAudioObj.GetComponent<AudioSource>();
+
+                        victoryAudio.clip = victoryClip;
+                        victoryAudio.loop = false;
+                        victoryAudio.Play();
+
+
+
+                    }
                     break;
                 default:
                     targetSpeed = 0f;
                     break;
             }
 
-            //if (treeController.GetComponent<NavMeshAgent>().speed != targetSpeed)
-            //{
-            //    treeController.GetComponent<NavMeshAgent>().speed = targetSpeed;
-            //    if (targetSpeed > 0)
-            //    {
-            //        text.text = "Tree Monster Speed Up!";
-            //        messageTimer = 1;
-            //    }
-            //}
+            if (treeController.GetComponent<NavMeshAgent>().speed != targetSpeed)
+            {
+                treeController.GetComponent<NavMeshAgent>().speed = targetSpeed;
+                if (targetSpeed > 0)
+                {
+                    //text.text = "Tree Monster Speed Up!";
+                    messageTimer = 1;
+                }
+            }
 
 
 
