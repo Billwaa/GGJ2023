@@ -44940,6 +44940,10 @@ PrefabInstance:
       value: Seed
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: dc17dced8aeb0f24bb2793a38f9e0f61, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc17dced8aeb0f24bb2793a38f9e0f61, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -44971,7 +44975,7 @@ NavMeshAgent:
   m_Height: 0.026502343
   m_BaseOffset: 0.1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 0
 --- !u!114 &1425057799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52509,26 +52513,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1931571607, guid: d464c45430f20ba4eb606f1f59e24710, type: 3}
-      propertyPath: m_Speed
-      value: 5.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1931571607, guid: d464c45430f20ba4eb606f1f59e24710, type: 3}
-      propertyPath: m_Radius
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1931571607, guid: d464c45430f20ba4eb606f1f59e24710, type: 3}
-      propertyPath: m_AutoBraking
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1931571607, guid: d464c45430f20ba4eb606f1f59e24710, type: 3}
-      propertyPath: m_Acceleration
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1931571607, guid: d464c45430f20ba4eb606f1f59e24710, type: 3}
-      propertyPath: m_AngularSpeed
-      value: 120
-      objectReference: {fileID: 0}
     - target: {fileID: 1931571608, guid: d464c45430f20ba4eb606f1f59e24710, type: 3}
       propertyPath: target
       value: 
@@ -52536,10 +52520,6 @@ PrefabInstance:
     - target: {fileID: 1603796651844153326, guid: d464c45430f20ba4eb606f1f59e24710, type: 3}
       propertyPath: m_Name
       value: Monster
-      objectReference: {fileID: 0}
-    - target: {fileID: 1603796651844153326, guid: d464c45430f20ba4eb606f1f59e24710, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2092489521606292820, guid: d464c45430f20ba4eb606f1f59e24710, type: 3}
       propertyPath: m_RootOrder

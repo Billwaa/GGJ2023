@@ -4954,7 +4954,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 0.2
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 0
 --- !u!114 &1262232866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4993,12 +4993,28 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6728165917981257814}
     m_Modifications:
+    - target: {fileID: 106974, guid: 632339e29e2ddd64aab6f9dd68facc82, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 115408, guid: 632339e29e2ddd64aab6f9dd68facc82, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 120778, guid: 632339e29e2ddd64aab6f9dd68facc82, type: 3}
       propertyPath: m_Name
       value: MysticExplosionWhite
       objectReference: {fileID: 0}
     - target: {fileID: 120778, guid: 632339e29e2ddd64aab6f9dd68facc82, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120778, guid: 632339e29e2ddd64aab6f9dd68facc82, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 156230, guid: 632339e29e2ddd64aab6f9dd68facc82, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 473558, guid: 632339e29e2ddd64aab6f9dd68facc82, type: 3}
@@ -5100,12 +5116,28 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6728165917981257814}
     m_Modifications:
+    - target: {fileID: 114642, guid: 6546e6efba58af9409ad6ffcc61de6a9, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 135446, guid: 6546e6efba58af9409ad6ffcc61de6a9, type: 3}
       propertyPath: m_Name
       value: MysticExplosionGreen
       objectReference: {fileID: 0}
     - target: {fileID: 135446, guid: 6546e6efba58af9409ad6ffcc61de6a9, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 135446, guid: 6546e6efba58af9409ad6ffcc61de6a9, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 163948, guid: 6546e6efba58af9409ad6ffcc61de6a9, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 181324, guid: 6546e6efba58af9409ad6ffcc61de6a9, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 499928, guid: 6546e6efba58af9409ad6ffcc61de6a9, type: 3}
