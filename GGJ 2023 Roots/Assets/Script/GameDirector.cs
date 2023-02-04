@@ -15,9 +15,9 @@ public class GameDirector : MonoBehaviour
     public AudioClip countdown2;
     public AudioClip victoryClip;
     public GameObject victoryAudioObj;
-
+    public GameObject victoryCanvas;
     private AudioSource audioSource;
-
+    public GameObject mainCam;
     private float timer;
 
     private TreeController treeController = null;
@@ -178,7 +178,19 @@ public class GameDirector : MonoBehaviour
                     if (!gameOver)
                     {
                         gameOver = true;
-                        text.text = "Victory!!!";
+                        string winner = "none";
+                        for (int i = 0; i < playerControllers.Length; i++)
+                        {   
+                            if (playerControllers[i].isDead==false){
+                                winner = playerControllers[i].PlayerName;
+                                mainCam.GetComponent<BillyGameSceneCamera>().SetWinner(playerControllers[i].gameObject);
+                                mainCam.GetComponent<BillyGameSceneCamera>().GameOver();
+                                break;
+                            }
+                        }
+                        //Debug.Log("winner is: "+winner);
+                        victoryCanvas.GetComponent<VictoryCanvas>().Victory(winner);
+                        victoryCanvas.SetActive(true);
 
                         AudioSource victoryAudio = victoryAudioObj.GetComponent<AudioSource>();
 
