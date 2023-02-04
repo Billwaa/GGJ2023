@@ -124,6 +124,7 @@ public class GameDirector : MonoBehaviour
             {
                 audioSource.clip = backgroundTack;
                 audioSource.Play();
+                audioSource.loop = true;
             }
         }
         else if (count < -1)

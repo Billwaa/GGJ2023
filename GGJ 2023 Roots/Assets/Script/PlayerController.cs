@@ -64,6 +64,10 @@ public class PlayerController : MonoBehaviour
 
     // Rigidbody
     public Rigidbody rb;
+
+    // Audio 
+    private AudioSource audioSource;
+    public AudioClip playerDeath;
     void Start()
     {
         skillCooldownTimer = 0;
@@ -83,6 +87,8 @@ public class PlayerController : MonoBehaviour
         RightKey_BK = RightKey;
         AttackKey_BK = AttackKey;
         PassKey_BK = PassKey;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -229,6 +235,9 @@ public class PlayerController : MonoBehaviour
         {
             isDead = true;
             animator.SetBool("isDead", true);
+            audioSource.clip = playerDeath;
+            audioSource.loop = false;
+            audioSource.Play();
         }
 
         

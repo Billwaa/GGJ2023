@@ -75,11 +75,11 @@ public class PlayerManager : MonoBehaviour
 
         for (int i = 0; i < num; i++)
         {
-            Debug.Log(selectedCharacter[i]);
+            //Debug.Log(selectedCharacter[i]);
             if (selectedCharacter[i] == -1)
                 continue;
 
-            Debug.Log(characterDatabase.database[i][selectedCharacter[i]]);
+            //Debug.Log(characterDatabase.database[i][selectedCharacter[i]]);
 
             // Player Initialization
             GameObject playerObj = GameObject.Instantiate(characterDatabase.database[i][selectedCharacter[i]]);
