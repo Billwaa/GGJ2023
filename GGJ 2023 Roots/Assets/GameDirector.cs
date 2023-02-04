@@ -10,6 +10,12 @@ public class GameDirector : MonoBehaviour
     public int countdown = 6;
     public TMP_Text text;
 
+    public AudioClip backgroundTack;
+    public AudioClip countdown1;
+    public AudioClip countdown2;
+
+    private AudioSource audioSource;
+
     private float timer;
 
     private TreeController treeController = null;
@@ -19,11 +25,15 @@ public class GameDirector : MonoBehaviour
     private bool randomSpawn = false;
     private bool[] aliveMap;
     private float messageTimer = 0;
+
+    private int lastAudioPlayTime = 10;
     // Start is called before the first frame update
     void Start()
     {
         gameStart = false;
-        timer = countdown;                
+        timer = countdown;        
+        
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -69,12 +79,26 @@ public class GameDirector : MonoBehaviour
                 seedController.GetComponent<NavMeshAgent>().enabled = false;
             }
 
+            if (lastAudioPlayTime != count)
+            {
+                audioSource.clip = countdown1;
+                audioSource.Play();
+                lastAudioPlayTime = count;
+            }
+
 
 
         }
         else if (count > -1 && count <= 0 )
         {
             text.text = "BATTLE!";
+
+            if (lastAudioPlayTime != count)
+            {
+                lastAudioPlayTime = count;
+                audioSource.clip = countdown2;
+                audioSource.Play();
+            }
         }
         else if (count == -1)
         {
@@ -95,6 +119,12 @@ public class GameDirector : MonoBehaviour
 
 
             text.text = "";
+
+            if (!audioSource.isPlaying)
+            {
+                audioSource.clip = backgroundTack;
+                audioSource.Play();
+            }
         }
         else if (count < -1)
         {
