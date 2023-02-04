@@ -18,10 +18,17 @@ public class SeedController : MonoBehaviour
     bool locked = false;
     int lastPlayerID = -1;
 
+
+    public AudioClip getSeedClip;
+    public AudioClip passSeedClip;
+
+    private AudioSource seedAudioSource;
+
     // Start is called before the first frame update
     void Start()
     {
         agent = this.GetComponent<NavMeshAgent>();
+        seedAudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -86,6 +93,8 @@ public class SeedController : MonoBehaviour
     public void nextTarget()
     {
         locked = false;
+        seedAudioSource.clip = passSeedClip;
+        seedAudioSource.Play();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -107,6 +116,8 @@ public class SeedController : MonoBehaviour
                     this.transform.localPosition = new Vector3(0, 3.5f, 0);
                     this.transform.rotation = Quaternion.Euler(-90, 0, 0);
                     //Debug.Log("hit");
+                    seedAudioSource.clip = getSeedClip;
+                    seedAudioSource.Play();
                 }
       
         }

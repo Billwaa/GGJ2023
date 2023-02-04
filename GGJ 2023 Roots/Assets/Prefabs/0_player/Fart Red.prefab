@@ -77017,9 +77017,9 @@ MonoBehaviour:
   fartedObj: {fileID: 0}
   rb: {fileID: 0}
   playerDeath: {fileID: 8300000, guid: 0125d5c7373918f4b8a5e187388d2f03, type: 3}
-  onionCry: {fileID: 8300000, guid: 775ca40fca4b73e42b1caf5bc0f86f66, type: 3}
+  onionCry: {fileID: 8300000, guid: 488796183b128de4a9877a80bc0d37a0, type: 3}
   chilliSpeed: {fileID: 8300000, guid: cf20981a5677e9b409d63f1eb694dd22, type: 3}
-  fartSound: {fileID: 8300000, guid: 488796183b128de4a9877a80bc0d37a0, type: 3}
+  fartSound: {fileID: 8300000, guid: 775ca40fca4b73e42b1caf5bc0f86f66, type: 3}
   slowSound: {fileID: 8300000, guid: 01460371d1b0b884ea9fc33377d5546c, type: 3}
   ivySound: {fileID: 8300000, guid: 94ddbc8a40213b8489eeb36e573eaffd, type: 3}
 --- !u!136 &9199892618776737111
