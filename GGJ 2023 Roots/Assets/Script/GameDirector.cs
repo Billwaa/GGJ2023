@@ -7,7 +7,7 @@ using UnityEngine.AI;
 public class GameDirector : MonoBehaviour
 {
     public bool gameStart = false;
-    public int countdown = 6;
+    public float countdown = 6;
     public TMP_Text text;
 
     public AudioClip backgroundTack;
@@ -49,7 +49,8 @@ public class GameDirector : MonoBehaviour
 
         if (count > 0)
         {
-            text.text = count.ToString();
+            if (count != 6)
+                text.text = count.ToString();
             playerControllers = GameObject.FindObjectsOfType<PlayerController>();
             treeController = GameObject.FindObjectOfType<TreeController>();
             seedController = GameObject.FindObjectOfType<SeedController>();
@@ -84,7 +85,7 @@ public class GameDirector : MonoBehaviour
                 seedController.GetComponent<NavMeshAgent>().enabled = false;
             }
 
-            if (lastAudioPlayTime != count)
+            if (lastAudioPlayTime != count  && count != 6) //&& count != 4)
             {
                 audioSource.clip = countdown1;
                 audioSource.Play();
@@ -129,6 +130,7 @@ public class GameDirector : MonoBehaviour
             {
                 audioSource.clip = backgroundTack;
                 audioSource.Play();
+                audioSource.volume = 0.8f;
                 audioSource.loop = true;
             }
         }
@@ -168,10 +170,10 @@ public class GameDirector : MonoBehaviour
                     targetSpeed = 5;
                     break;
                 case 3:
-                    targetSpeed = 5.1f;
+                    targetSpeed = 5.2f;
                     break;
                 case 2:
-                    targetSpeed = 5.2f;
+                    targetSpeed = 5.4f;
                     break;
                 case 1:
                     targetSpeed = 0f;
@@ -195,7 +197,7 @@ public class GameDirector : MonoBehaviour
                         AudioSource victoryAudio = victoryAudioObj.GetComponent<AudioSource>();
 
                         victoryAudio.clip = victoryClip;
-                        victoryAudio.loop = false;
+                        victoryAudio.loop = true;
                         victoryAudio.Play();
 
 
