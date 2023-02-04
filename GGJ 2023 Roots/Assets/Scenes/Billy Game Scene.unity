@@ -3151,6 +3151,7 @@ GameObject:
   - component: {fileID: 120752043}
   - component: {fileID: 120752042}
   - component: {fileID: 120752041}
+  - component: {fileID: 120752045}
   m_Layer: 0
   m_Name: Main Camera (1)
   m_TagString: MainCamera
@@ -3276,14 +3277,32 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120752040}
-  m_LocalRotation: {x: 0.3220247, y: -0.012781331, z: 0.004344064, w: 0.94663507}
+  m_LocalRotation: {x: 0.17363244, y: -0.013293016, z: 0.0023355198, w: 0.9847181}
   m_LocalPosition: {x: -0.42693746, y: 13.208527, z: -27.506393}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 35.881, y: -176.803, z: -0.334}
+  m_LocalEulerAnglesHint: {x: 20, y: -1.547, z: -0.001}
+--- !u!114 &120752045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120752040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84cc1bdb8c268a240988d97383d6e579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whtTexture: {fileID: 2800000, guid: ba3c63643b9e7be4c88b2499a551c5e8, type: 3}
+  fadeColor: {r: 1, g: 1, b: 1, a: 1}
+  fadeTime: 2
+  rotateXStart: 20
+  rotateXEnd: 37.574
+  rotationSpeed: 10
 --- !u!4 &121512996 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5c03187fd2df8fe488a98c0b420a4d1b, type: 3}
