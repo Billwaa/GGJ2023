@@ -255,7 +255,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Fart")
+        if (!this.isDead && other.gameObject.tag == "Fart")
         {
             if (other.gameObject.GetComponent<FartBombController>().ownerID != this.PlayerId)
             {
