@@ -68,6 +68,12 @@ public class PlayerController : MonoBehaviour
     // Audio 
     private AudioSource audioSource;
     public AudioClip playerDeath;
+    public AudioClip onionCry;
+    public AudioClip chilliSpeed;
+    public AudioClip fartSound;
+    public AudioClip slowSound;
+    public AudioClip ivySound;
+
     void Start()
     {
         skillCooldownTimer = 0;
@@ -161,6 +167,9 @@ public class PlayerController : MonoBehaviour
                                 FartBombController fartBombController = fartBomb.GetComponent<FartBombController>();
                                 fartBombController.effectTimer = this.skill.SkillEffectTime;
                                 fartBombController.ownerID = this.PlayerId;
+
+                                audioSource.clip = fartSound;
+                                audioSource.Play();
                             }
 
                             this.skillCooldownTimer = skill.SkillCooldown;
@@ -253,6 +262,10 @@ public class PlayerController : MonoBehaviour
                 FartEffect.SetActive(true);
                 this.speed = 0.4f * Speed;
                 fartedObj = other.gameObject;
+
+                audioSource.clip = slowSound;
+                audioSource.Play();
+
             }
         }
     }
@@ -275,6 +288,9 @@ public class PlayerController : MonoBehaviour
         IvyEffect.SetActive(true);
         this.holdTimer = duration;
         rb.velocity = new Vector3(0, 0, 0);
+
+        audioSource.clip = ivySound;
+        audioSource.Play();
     }
 
     public void OnionSkillEffect(float duration)
@@ -286,11 +302,17 @@ public class PlayerController : MonoBehaviour
         this.LeftKey = this.RightKey_BK;
         onionTimer = duration;
         OnionEffect.SetActive(true);
+
+        audioSource.clip = onionCry;
+        audioSource.Play();
     }
 
     public void ChilliSkillEffect(float duration)
     {
         this.speed = 2 * Speed;
         chilliTimer = duration;
+
+        audioSource.clip = chilliSpeed;
+        audioSource.Play();
     }
 }
