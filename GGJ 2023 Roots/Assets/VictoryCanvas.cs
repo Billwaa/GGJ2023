@@ -52,6 +52,6 @@ public class VictoryCanvas : MonoBehaviour
         SceneManager.LoadScene("CharacterSelection",LoadSceneMode.Single);
     }
     public void MainMenu(){
-
+SceneManager.LoadScene("StartMenu");
     }
 }
