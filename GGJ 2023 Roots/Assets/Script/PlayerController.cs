@@ -74,6 +74,9 @@ public class PlayerController : MonoBehaviour
     public AudioClip slowSound;
     public AudioClip ivySound;
 
+    // Win Flag for Pose
+    public bool victorious = false;
+
     void Start()
     {
         skillCooldownTimer = 0;
@@ -133,6 +136,18 @@ public class PlayerController : MonoBehaviour
 
                 float angle = Mathf.Atan2(-direction.x, -direction.z) * 180.0f / Mathf.PI + 180;
                 this.transform.rotation = Quaternion.Euler(0, angle, 0);
+
+                // Override standing still
+                if (direction == new Vector3(0, 0, 0))
+                    this.transform.rotation = Quaternion.Euler(0, 180, 0);
+
+                // Victory Stance
+                if (victorious)
+                {
+                    animator.SetBool("isVictorious", true);
+                    this.transform.rotation = Quaternion.Euler(0, 145, 0);
+                }
+
 
                 if (direction.magnitude > 0)
                     animator.SetBool("isWalking", true);
@@ -199,7 +214,7 @@ public class PlayerController : MonoBehaviour
             passCooldownTimer -= Time.deltaTime;
 
             if (passCooldownTimer > 0)
-                passCooldown.fillAmount = passCooldownTimer/5.0f;
+                passCooldown.fillAmount = passCooldownTimer/3.0f;
             else
                 passCooldown.fillAmount = 0;
 

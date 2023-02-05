@@ -10,6 +10,7 @@ public class GameDirector : MonoBehaviour
     public bool gameStart = false;
     public float countdown = 6;
     public TMP_Text text;
+    public TMP_Text gameStatusText;
 
     public AudioClip backgroundTack;
     public AudioClip countdown1;
@@ -148,18 +149,18 @@ public class GameDirector : MonoBehaviour
                 if (aliveMap[i] == playerControllers[i].isDead)
                 {
                     aliveMap[i] = false;
-                    text.fontSize = 100;
-                    text.text = playerControllers[i].PlayerName + " was Terminated!\n Tree Monster Speed Up!";
+                    gameStatusText.fontSize = 75;
+                    gameStatusText.text = playerControllers[i].PlayerName + " was Terminated!\n Tree Monster Speed Up!";
                     messageTimer = 2;
 
                     if (playerControllers[i].PlayerName == "Green")
-                        text.color = Color.green;
+                        gameStatusText.color = Color.green;
                     if (playerControllers[i].PlayerName == "Red")
-                        text.color = Color.red;
+                        gameStatusText.color = Color.red;
                     if (playerControllers[i].PlayerName == "Black")
-                        text.color = Color.grey;
+                        gameStatusText.color = Color.grey;
                     if (playerControllers[i].PlayerName == "Yellow")
-                        text.color = Color.yellow;
+                        gameStatusText.color = Color.yellow;
                 }
             }
 
@@ -168,6 +169,13 @@ public class GameDirector : MonoBehaviour
             for (int i = 0; i < aliveMap.Length; i++)
                 if (aliveMap[i])
                     alivePlayer++;
+
+            // No need to display kill message if victory
+            if (alivePlayer <= 1)
+            {
+                gameStatusText.text = "";
+                messageTimer = 0;
+            }
 
             float targetSpeed = 0;
 
@@ -194,6 +202,7 @@ public class GameDirector : MonoBehaviour
                                 winner = playerControllers[i].PlayerName;
                                 mainCam.GetComponent<BillyGameSceneCamera>().SetWinner(playerControllers[i].gameObject);
                                 mainCam.GetComponent<BillyGameSceneCamera>().GameOver();
+                                playerControllers[i].victorious = true;
                                 break;
                             }
                         }
@@ -229,7 +238,10 @@ public class GameDirector : MonoBehaviour
 
 
             if (messageTimer <= 0)
+            {
                 text.text = "";
+                gameStatusText.text = "";
+            }
             else
                 messageTimer -= Time.deltaTime;
 
