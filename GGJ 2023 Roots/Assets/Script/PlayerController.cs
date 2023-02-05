@@ -95,6 +95,13 @@ public class PlayerController : MonoBehaviour
         PassKey_BK = PassKey;
 
         audioSource = GetComponent<AudioSource>();
+
+        // Make Fart Faster to Balance
+        if (skill.SkillID == 2)
+        {
+            this.Speed *= 1.15f;
+            this.speed = this.Speed;
+        }
     }
 
     void Update()
@@ -240,7 +247,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Monster")
+        if (!this.isDead && collision.gameObject.tag == "Monster")
         {
             isDead = true;
             animator.SetBool("isDead", true);
@@ -255,7 +262,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!this.isDead && other.gameObject.tag == "Fart")
+        if (!this.isDead && chilliTimer <= 0 && other.gameObject.tag == "Fart")
         {
             if (other.gameObject.GetComponent<FartBombController>().ownerID != this.PlayerId)
             {

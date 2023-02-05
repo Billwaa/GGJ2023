@@ -111,7 +111,7 @@ public class SeedController : MonoBehaviour
                     lastPlayerID = other.transform.GetComponent<PlayerController>().PlayerId;
                     player.hasSeed = true;
                     player.seedController = this;
-                    player.passCooldownTimer = 4; // 5 sec before pass
+                    player.passCooldownTimer = 3; // 5 sec before pass
                     this.transform.parent = other.transform;
                     this.transform.localPosition = new Vector3(0, 3.5f, 0);
                     this.transform.rotation = Quaternion.Euler(-90, 0, 0);
