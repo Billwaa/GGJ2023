@@ -54,6 +54,7 @@ public class CharacterSelect : MonoBehaviour
             joinCanvas.SetActive(false);
             selectingCanvas.SetActive(true);
             readyCanvas.SetActive(false);
+                soundController.buttonClick();
             break;
 
             case readyStatus.SELECTING:
@@ -62,6 +63,7 @@ public class CharacterSelect : MonoBehaviour
             joinCanvas.SetActive(false);
             selectingCanvas.SetActive(false);
             readyCanvas.SetActive(true);
+            soundController.confirmCharacter();
             break;
 
             default:
@@ -119,7 +121,6 @@ public class CharacterSelect : MonoBehaviour
         {            Debug.Log("P"+playerPosition.ToString()+"Triggered Confirm");
             Confirm();
             Debug.Log("P"+playerPosition.ToString()+"Triggered Confirm");
-            soundController.buttonClick();
 
         }
         if (Input.GetButtonDown("P"+(playerPosition+1).ToString()+"B"))

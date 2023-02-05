@@ -26,4 +26,16 @@ public class UISoundController : MonoBehaviour
         audioSource.clip = buttonClickClip;
         audioSource.Play();
     }
+
+    public void confirmCharacter()
+    {
+        audioSource.clip = confirmSelectionClip;
+        audioSource.Play();
+    }
+
+    public void startGame()
+    {
+        audioSource.clip = gameStartClip;
+        audioSource.Play();
+    }
 }

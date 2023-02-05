@@ -60,6 +60,8 @@ public class CharacterSelectManager : MonoBehaviour
 
     void BeginGame(){
         errorText.SetActive(false);
+        soundController.startGame();
+
         Debug.Log("開始遊戲");
         Camera.main.GetComponent<CharacterSelectCameraMovement>().startGame();
         

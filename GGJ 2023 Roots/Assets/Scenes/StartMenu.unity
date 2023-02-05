@@ -8883,9 +8883,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2078225369}
-        m_TargetAssemblyTypeName: SoundController, Assembly-CSharp
-        m_MethodName: buttonClick
+      - m_Target: {fileID: 1367037037}
+        m_TargetAssemblyTypeName: UISoundController, Assembly-CSharp
+        m_MethodName: confirmCharacter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15819,8 +15819,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2078225369}
-        m_TargetAssemblyTypeName: SoundController, Assembly-CSharp
+      - m_Target: {fileID: 1367037037}
+        m_TargetAssemblyTypeName: UISoundController, Assembly-CSharp
         m_MethodName: buttonClick
         m_Mode: 1
         m_Arguments:
@@ -17969,8 +17969,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2078225369}
-        m_TargetAssemblyTypeName: SoundController, Assembly-CSharp
+      - m_Target: {fileID: 1367037037}
+        m_TargetAssemblyTypeName: UISoundController, Assembly-CSharp
         m_MethodName: buttonClick
         m_Mode: 1
         m_Arguments:
@@ -25870,6 +25870,74 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 09516ebfd23861943bb80d5e0f9964f6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 861108db05506534c82e081e76d94053, type: 3}
+--- !u!1001 &1367037036
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2378417907368455052, guid: 5340d5979f816854d9f1c8d8be61f82d, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378417907368455052, guid: 5340d5979f816854d9f1c8d8be61f82d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1043.6903
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378417907368455052, guid: 5340d5979f816854d9f1c8d8be61f82d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 574.22845
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378417907368455052, guid: 5340d5979f816854d9f1c8d8be61f82d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -973.87555
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378417907368455052, guid: 5340d5979f816854d9f1c8d8be61f82d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378417907368455052, guid: 5340d5979f816854d9f1c8d8be61f82d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378417907368455052, guid: 5340d5979f816854d9f1c8d8be61f82d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378417907368455052, guid: 5340d5979f816854d9f1c8d8be61f82d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378417907368455052, guid: 5340d5979f816854d9f1c8d8be61f82d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378417907368455052, guid: 5340d5979f816854d9f1c8d8be61f82d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378417907368455052, guid: 5340d5979f816854d9f1c8d8be61f82d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378417907368455153, guid: 5340d5979f816854d9f1c8d8be61f82d, type: 3}
+      propertyPath: m_Name
+      value: UISound
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5340d5979f816854d9f1c8d8be61f82d, type: 3}
+--- !u!114 &1367037037 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2378417907368455054, guid: 5340d5979f816854d9f1c8d8be61f82d, type: 3}
+  m_PrefabInstance: {fileID: 1367037036}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d807b37dd871464d95c3c0c0e20d563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1371014570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45048,8 +45116,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2078225369}
-        m_TargetAssemblyTypeName: SoundController, Assembly-CSharp
+      - m_Target: {fileID: 1367037037}
+        m_TargetAssemblyTypeName: UISoundController, Assembly-CSharp
         m_MethodName: buttonClick
         m_Mode: 1
         m_Arguments:
@@ -47937,17 +48005,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5c03187fd2df8fe488a98c0b420a4d1b, type: 3}
   m_PrefabInstance: {fileID: 2078018945}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2078225369 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2515480469444142901, guid: 9e0ff4e117a56794d8d3df5370b79e44, type: 3}
-  m_PrefabInstance: {fileID: 2515480468886484356}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 346c7315137119741b2f8dda5b3de263, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2094133371
 PrefabInstance:
   m_ObjectHideFlags: 0
