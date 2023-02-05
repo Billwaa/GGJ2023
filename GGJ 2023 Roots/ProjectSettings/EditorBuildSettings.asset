@@ -6,17 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: 14ba25ce20b5f1e468c92ca89295e374
+  - enabled: 1
     path: Assets/Scenes/CharacterSelection.unity
     guid: cdf20d900008c6846ad74a76a40d4a82
   - enabled: 1
-    path: Assets/Scenes/Billy Test Scene.unity
-    guid: 79f49cb16b08c504b8190e387efcab76
-  - enabled: 1
     path: Assets/Scenes/Billy Game Scene.unity
     guid: ecbf84030d5952f4c87217068e765930
-  - enabled: 1
-    path: Assets/Scenes/StartMenu.unity
-    guid: 14ba25ce20b5f1e468c92ca89295e374
+  - enabled: 0
+    path: Assets/Scenes/Billy Test Scene.unity
+    guid: 79f49cb16b08c504b8190e387efcab76
   - enabled: 1
     path: Assets/Scenes/GalleryScene.unity
     guid: db091fde4572c4b2e871db9de1204943
