@@ -214,7 +214,7 @@ public class PlayerController : MonoBehaviour
             passCooldownTimer -= Time.deltaTime;
 
             if (passCooldownTimer > 0)
-                passCooldown.fillAmount = passCooldownTimer/5.0f;
+                passCooldown.fillAmount = passCooldownTimer/3.0f;
             else
                 passCooldown.fillAmount = 0;
 
