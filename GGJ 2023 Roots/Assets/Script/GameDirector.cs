@@ -20,6 +20,7 @@ public class GameDirector : MonoBehaviour
     public GameObject victoryCanvas;
     private AudioSource audioSource;
     public GameObject mainCam;
+    public GameObject announceCanvas;
     private float timer;
 
     private TreeController treeController = null;
@@ -151,6 +152,7 @@ public class GameDirector : MonoBehaviour
                     aliveMap[i] = false;
                     gameStatusText.fontSize = 75;
                     gameStatusText.text = playerControllers[i].PlayerName + " was Terminated!\n Tree Monster Speed Up!";
+                    announceCanvas.GetComponent<StatusUIManager>().AnnouceDeath(playerControllers[i].PlayerName);
                     messageTimer = 2;
 
                     if (playerControllers[i].PlayerName == "Green")
