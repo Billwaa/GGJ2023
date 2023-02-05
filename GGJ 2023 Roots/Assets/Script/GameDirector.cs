@@ -169,6 +169,13 @@ public class GameDirector : MonoBehaviour
                 if (aliveMap[i])
                     alivePlayer++;
 
+            // No need to display kill message if victory
+            if (alivePlayer <= 1)
+            {
+                text.text = "";
+                messageTimer = 0;
+            }
+
             float targetSpeed = 0;
 
             switch (alivePlayer)
@@ -194,6 +201,7 @@ public class GameDirector : MonoBehaviour
                                 winner = playerControllers[i].PlayerName;
                                 mainCam.GetComponent<BillyGameSceneCamera>().SetWinner(playerControllers[i].gameObject);
                                 mainCam.GetComponent<BillyGameSceneCamera>().GameOver();
+                                playerControllers[i].victorious = true;
                                 break;
                             }
                         }
