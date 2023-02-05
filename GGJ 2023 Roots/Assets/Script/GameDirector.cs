@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class GameDirector : MonoBehaviour
 {
@@ -44,6 +45,12 @@ public class GameDirector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.R))
+            SceneManager.LoadScene("Billy Game Scene");
+
+        if (Input.GetKey(KeyCode.T))
+            SceneManager.LoadScene("CharacterSelection");
+
         timer -= Time.deltaTime;
         int count = Mathf.FloorToInt(timer);
 
@@ -167,13 +174,13 @@ public class GameDirector : MonoBehaviour
             switch (alivePlayer)
             {
                 case 4:
-                    targetSpeed = 5;
+                    targetSpeed = 4.6f;
                     break;
                 case 3:
-                    targetSpeed = 5.2f;
+                    targetSpeed = 5.0f;
                     break;
                 case 2:
-                    targetSpeed = 5.4f;
+                    targetSpeed = 5.2f;
                     break;
                 case 1:
                     targetSpeed = 0f;
