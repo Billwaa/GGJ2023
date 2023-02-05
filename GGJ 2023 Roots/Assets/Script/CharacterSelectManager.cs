@@ -7,6 +7,14 @@ public class CharacterSelectManager : MonoBehaviour
 {
     public GameObject[] characterSelections;
     public GameObject errorText;
+
+    private UISoundController soundController;
+
+    private void Start()
+    {
+       soundController = FindObjectOfType<UISoundController>();
+    }
+
     void BeginGameCheck(){
 
         bool steadyGo = true;
@@ -21,7 +29,7 @@ public class CharacterSelectManager : MonoBehaviour
 
         if (!steadyGo){
         errorText.SetActive(true);
-        errorText.GetComponent<TextMeshProUGUI>().text="Someone is not ready!";
+        errorText.GetComponent<TextMeshProUGUI>().text="Someone is not ready yet!";
         Debug.Log("還有人未準備好!");
         return;
         }
@@ -40,7 +48,7 @@ public class CharacterSelectManager : MonoBehaviour
 
         if (playerNumber<2){
         errorText.SetActive(true);
-        errorText.GetComponent<TextMeshProUGUI>().text="Atleast 2 players are required!";
+        errorText.GetComponent<TextMeshProUGUI>().text="At least 2 players are required!";
         Debug.Log("至少需要2名玩家!");
         return;
         }
@@ -69,6 +77,7 @@ public class CharacterSelectManager : MonoBehaviour
     {
         if (Input.GetButtonDown("Start"))
         {
+            soundController.buttonClick();
             BeginGameCheck();
 
         }

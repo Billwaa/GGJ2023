@@ -28,6 +28,8 @@ public class CharacterSelect : MonoBehaviour
 
     private readyStatus playerReadyStatus = readyStatus.RETIRED;
 
+    private UISoundController soundController;
+
     public int getCharacterSelected(){
     return selectedCharacter;
     }
@@ -39,6 +41,7 @@ public class CharacterSelect : MonoBehaviour
         joinText.GetComponent<TextMeshProUGUI>().text=confirmKeyMap[playerPosition]+" to Join";
         retireText1.GetComponent<TextMeshProUGUI>().text=cancelKeyMap[playerPosition]+" to Cancel";
         retireText2.GetComponent<TextMeshProUGUI>().text=cancelKeyMap[playerPosition]+" to Cancel";
+        soundController = FindObjectOfType<UISoundController>();
     }
 
     public void Confirm(){
@@ -96,7 +99,6 @@ public class CharacterSelect : MonoBehaviour
         characters[selectedCharacter].SetActive(false);
         selectedCharacter = (selectedCharacter+1)%characters.Length;
         characters[selectedCharacter].SetActive(true);
-        
     }
 
     public void PreviousCharacter(){
@@ -107,7 +109,7 @@ public class CharacterSelect : MonoBehaviour
         selectedCharacter += characters.Length;
     }
     characters[selectedCharacter].SetActive(true);
-    
+
     }
 
 
@@ -117,18 +119,24 @@ public class CharacterSelect : MonoBehaviour
         {            Debug.Log("P"+playerPosition.ToString()+"Triggered Confirm");
             Confirm();
             Debug.Log("P"+playerPosition.ToString()+"Triggered Confirm");
+            soundController.buttonClick();
+
         }
         if (Input.GetButtonDown("P"+(playerPosition+1).ToString()+"B"))
         {
             Cancel();
             Debug.Log("P"+playerPosition.ToString()+"Triggered Cancel");
+            soundController.buttonClick();
+
         }
         if (Input.GetButtonDown("P"+(playerPosition+1).ToString()+"Right"))
         {
+            soundController.buttonClick();
             NextCharacter();
             Debug.Log("P"+playerPosition.ToString()+"Triggered next Char");
         }else if (Input.GetButtonDown("P"+(playerPosition+1).ToString()+"Left"))
         {
+            soundController.buttonClick();
             PreviousCharacter();
             Debug.Log("Triggered prev Char");
         }
