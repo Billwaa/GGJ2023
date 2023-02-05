@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.7718141, g: 0.9107146, b: 0.99547845, a: 1}
+  m_IndirectSpecularColor: {r: 0.77155495, g: 0.9107197, b: 0.99525565, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -49815,6 +49815,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1119855432}
     m_Modifications:
+    - target: {fileID: 2080271670, guid: 05ecc36ad6266444b932e559613d415e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137178384, guid: 05ecc36ad6266444b932e559613d415e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2800773066203440550, guid: 05ecc36ad6266444b932e559613d415e, type: 3}
       propertyPath: m_Name
       value: Player01_Green
@@ -49887,6 +49895,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3712153761152735942, guid: c7c838e79305ab44fbcde0320ec2d003, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4743374888364863041, guid: c7c838e79305ab44fbcde0320ec2d003, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4743374888438481511, guid: c7c838e79305ab44fbcde0320ec2d003, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7425734398543497975, guid: c7c838e79305ab44fbcde0320ec2d003, type: 3}
@@ -50001,6 +50017,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6396293748730524383, guid: 1d64262fea64072448ab0b7800e43ef8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8453744313740381395, guid: 1d64262fea64072448ab0b7800e43ef8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8453744313814606069, guid: 1d64262fea64072448ab0b7800e43ef8, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -50120,6 +50144,14 @@ PrefabInstance:
     - target: {fileID: 2656834246509354853, guid: b2d85563e9d6c94439409de82f9339aa, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2656834246509354856, guid: b2d85563e9d6c94439409de82f9339aa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2656834246585676622, guid: b2d85563e9d6c94439409de82f9339aa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6235544649969797065, guid: b2d85563e9d6c94439409de82f9339aa, type: 3}
       propertyPath: m_Enabled
