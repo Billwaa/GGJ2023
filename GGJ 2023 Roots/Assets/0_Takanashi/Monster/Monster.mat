@@ -301,7 +301,7 @@ Material:
     - _Offset_Z: 0
     - _Oper: 0
     - _OutlineExtrudeMethod: 0
-    - _OutlineWidth: 2.46
+    - _OutlineWidth: 0.75
     - _OutlineWidthAffectedByViewDistance: 0
     - _OutlineZPostionInCamera: 0
     - _Outline_Width: 10
